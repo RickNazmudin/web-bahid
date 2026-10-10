@@ -2,10 +2,11 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
 export async function GET(req: NextRequest) {
+  const searchParams = req.nextUrl.searchParams;
+  const registrationNumber = searchParams.get("registrationNumber")?.trim();
+  const birthDateStr = searchParams.get("birthDate")?.trim();
+
   try {
-    const searchParams = req.nextUrl.searchParams;
-    const registrationNumber = searchParams.get("registrationNumber")?.trim();
-    const birthDateStr = searchParams.get("birthDate")?.trim();
 
     if (!registrationNumber || !birthDateStr) {
       return NextResponse.json(
@@ -36,10 +37,7 @@ export async function GET(req: NextRequest) {
 
     const applicant = await prisma.applicant.findFirst({
       where: {
-        registrationNumber: {
-          equals: registrationNumber,
-          mode: "insensitive",
-        },
+        registrationNumber,
         birthDate: {
           gte: startOfDay,
           lte: endOfDay,

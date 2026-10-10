@@ -25,10 +25,10 @@ export async function GET(req: NextRequest) {
 
     if (search.trim()) {
       where.OR = [
-        { fullName: { contains: search, mode: "insensitive" } },
-        { registrationNumber: { contains: search, mode: "insensitive" } },
-        { nik: { contains: search, mode: "insensitive" } },
-        { nisn: { contains: search, mode: "insensitive" } },
+        { fullName: { contains: search } },
+        { registrationNumber: { contains: search } },
+        { nik: { contains: search } },
+        { nisn: { contains: search } },
       ];
     }
 

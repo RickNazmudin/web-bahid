@@ -23,9 +23,9 @@ export async function GET(req: NextRequest) {
 
     if (search.trim()) {
       where.OR = [
-        { fullName: { contains: search, mode: "insensitive" } },
-        { nis: { contains: search, mode: "insensitive" } },
-        { nisn: { contains: search, mode: "insensitive" } },
+        { fullName: { contains: search } },
+        { nis: { contains: search } },
+        { nisn: { contains: search } },
       ];
     }
 
