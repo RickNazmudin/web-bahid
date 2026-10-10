@@ -1,0 +1,276 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum UserRole {
+  SUPER_ADMIN
+  ADMIN
+}
+
+enum Gender {
+  LAKI_LAKI
+  PEREMPUAN
+}
+
+enum ApplicantStatus {
+  BARU
+  VERIFIKASI
+  SELEKSI
+  LULUS
+  DITOLAK
+  DAFTAR_ULANG
+  DITERIMA
+}
+
+enum DocumentType {
+  KK
+  AKTA_KELAHIRAN
+  IJAZAH_SKL
+  PAS_FOTO
+  KIP_PKH
+  RAPOR
+  PRESTASI
+  LAINNYA
+}
+
+enum DocumentStatus {
+  PENDING
+  VALID
+  INVALID
+}
+
+enum StudentStatus {
+  AKTIF
+  LULUS
+  MUTASI
+  KELUAR
+}
+
+model User {
+  id           String     @id @default(cuid())
+  name         String
+  email        String     @unique
+  passwordHash String
+  role         UserRole   @default(ADMIN)
+  isActive     Boolean    @default(true)
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  auditLogs    AuditLog[]
+
+  @@map("users")
+}
+
+model RegistrationPeriod {
+  id              String      @id @default(cuid())
+  name            String      // Contoh: Gelombang 1 TA 2026/2027
+  academicYear    String      // Contoh: 2026/2027
+  startDate       DateTime
+  endDate         DateTime
+  quota           Int         @default(100)
+  registrationFee Decimal     @default(0) @db.Decimal(12, 2)
+  isActive        Boolean     @default(true)
+  description     String?     @db.Text
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+  applicants      Applicant[]
+
+  @@map("registration_periods")
+}
+
+model Program {
+  id          String      @id @default(cuid())
+  name        String      // Contoh: MTs Unggulan Tahfidz, MA Plus Keterampilan, dll.
+  slug        String      @unique
+  level       String      // MI, MTs, MA, SMA, SMK, Salafiyah, dll.
+  description String?     @db.Text
+  curriculum  String?     @db.Text
+  quota       Int         @default(50)
+  isActive    Boolean     @default(true)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  applicants  Applicant[]
+  students    Student[]
+
+  @@map("programs")
+}
+
+model Applicant {
+  id                 String             @id @default(cuid())
+  registrationNumber String             @unique // Contoh: PSB-2026-0001
+  fullName           String
+  gender             Gender
+  nisn               String?
+  nik                String?
+  birthPlace         String
+  birthDate          DateTime
+  phone              String?
+  address            String             @db.Text
+  previousSchool     String
+  
+  programId          String
+  program            Program            @relation(fields: [programId], references: [id])
+  
+  periodId           String
+  period             RegistrationPeriod @relation(fields: [periodId], references: [id])
+  
+  status             ApplicantStatus    @default(BARU)
+  rejectionReason    String?            @db.Text
+  notes              String?            @db.Text
+  
+  parent             Parent?
+  documents          Document[]
+  student            Student?
+  
+  createdAt          DateTime           @default(now())
+  updatedAt          DateTime           @updatedAt
+
+  @@index([registrationNumber])
+  @@index([birthDate])
+  @@index([status])
+  @@map("applicants")
+}
+
+model Parent {
+  id               String    @id @default(cuid())
+  applicantId      String    @unique
+  applicant        Applicant @relation(fields: [applicantId], references: [id], onDelete: Cascade)
+  
+  fatherName       String?
+  fatherNik        String?
+  fatherJob        String?
+  fatherPhone      String?
+  fatherIncome     String?
+  
+  motherName       String?
+  motherNik        String?
+  motherJob        String?
+  motherPhone      String?
+  motherIncome     String?
+  
+  guardianName     String?
+  guardianPhone    String?
+  guardianRelation String?
+  
+  parentAddress    String?   @db.Text
+  
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  @@map("parents")
+}
+
+model Document {
+  id               String         @id @default(cuid())
+  applicantId      String
+  applicant        Applicant      @relation(fields: [applicantId], references: [id], onDelete: Cascade)
+  
+  type             DocumentType
+  fileName         String
+  fileUrl          String
+  fileSize         Int?           // dalam bytes
+  mimeType         String?
+  status           DocumentStatus @default(PENDING)
+  verificationNote String?        @db.Text
+  
+  createdAt        DateTime       @default(now())
+  updatedAt        DateTime       @updatedAt
+
+  @@index([applicantId])
+  @@map("documents")
+}
+
+model Student {
+  id            String        @id @default(cuid())
+  nis           String        @unique // Nomor Induk Santri (dihasilkan saat diterima)
+  applicantId   String?       @unique
+  applicant     Applicant?    @relation(fields: [applicantId], references: [id])
+  
+  fullName      String
+  gender        Gender
+  nisn          String?
+  nik           String?
+  birthPlace    String
+  birthDate     DateTime
+  
+  programId     String
+  program       Program       @relation(fields: [programId], references: [id])
+  
+  entryYear     Int           // Contoh: 2026
+  status        StudentStatus @default(AKTIF)
+  classGrade    String?       // Contoh: Kelas 7A, Kelas 10 IPA 1
+  dormitoryRoom String?       // Contoh: Asrama Al-Farabi Kamar 04
+  address       String?       @db.Text
+  phone         String?
+  
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  @@index([nis])
+  @@index([status])
+  @@map("students")
+}
+
+model Facility {
+  id          String   @id @default(cuid())
+  name        String
+  category    String   // Asrama, Ruang Belajar, Olahraga, Ibadah, Laboratorium, dll.
+  description String?  @db.Text
+  imageUrl    String
+  orderIndex  Int      @default(0)
+  isPublished Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("facilities")
+}
+
+model News {
+  id          String   @id @default(cuid())
+  title       String
+  slug        String   @unique
+  excerpt     String?  @db.Text
+  content     String   @db.Text
+  thumbnail   String?
+  authorName  String?  @default("Admin Pesantren")
+  isPublished Boolean  @default(true)
+  publishedAt DateTime @default(now())
+  views       Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([slug])
+  @@index([isPublished])
+  @@map("news")
+}
+
+model Setting {
+  id          String   @id @default(cuid())
+  key         String   @unique // nama_pesantren, logo_url, alamat, telepon, wa, email, visi, misi, dll.
+  value       String   @db.Text
+  group       String   @default("general") // general, ppdb, contact, visual
+  description String?
+  updatedAt   DateTime @updatedAt
+
+  @@map("settings")
+}
+
+model AuditLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  action    String   // VERIFIKASI_PENDAFTAR, UBAH_STATUS, LOGIN, KONVERSI_SANTRI, dll.
+  entity    String   // Applicant, Student, News, Setting
+  entityId  String?
+  details   String?  @db.Text // JSON metadata atau deskripsi ringkas
+  ipAddress String?
+  createdAt DateTime @default(now())
+
+  @@index([action])
+  @@index([entity])
+  @@map("audit_logs")
+}
