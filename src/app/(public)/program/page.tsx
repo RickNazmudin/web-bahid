@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Program Pendidikan — Pesantren Modern Darul Ulum",
+  title: "Program Pendidikan — Pesantren Baitul Hidayah",
   description:
     "Pilihan program pendidikan: MTs Unggulan Tahfidz Al-Qur'an, MA Plus Riset Sains Digital, dan Pendidikan Diniyah Formal (PDF) Ulya.",
 };
@@ -71,9 +71,9 @@ const programs = [
 
 export default function ProgramPage() {
   return (
-    <div className="w-full flex flex-col items-center bg-white text-[#2B2825] font-light overflow-x-hidden selection:bg-[#D3AD3B] selection:text-white">
+    <div className="w-full flex flex-col items-center bg-white text-[#2B2825] font-light overflow-x-hidden selection:bg-[#E5A81E] selection:text-white">
       {/* ── HEADER ────────────────────────────────────────── */}
-      <header className="relative w-full min-h-[48vh] flex items-center justify-center pt-44 md:pt-52 pb-20 md:pb-28 px-6 md:px-12 bg-[#1A1A2E] text-white overflow-hidden text-center">
+      <header className="relative w-full min-h-[48vh] flex items-center justify-center pt-44 md:pt-52 pb-20 md:pb-28 px-6 md:px-12 bg-[#0B3521] text-white overflow-hidden text-center">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero-campus.jpg"
@@ -83,11 +83,11 @@ export default function ProgramPage() {
             className="w-full h-full object-cover opacity-25 mix-blend-luminosity"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A2E]/80 via-[#1A1A2E]/50 to-[#1A1A2E]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B3521]/80 via-[#0B3521]/50 to-[#0B3521]" />
         </div>
 
         <div className="relative z-10 w-full max-w-4xl mx-auto text-center flex flex-col items-center">
-          <span className="text-[#CA9667] text-xs font-medium uppercase tracking-widest mb-4 block">
+          <span className="text-[#E5A81E] text-xs font-medium uppercase tracking-widest mb-4 block">
             Pilihan Jenjang
           </span>
           <h1 className="font-serif text-4xl sm:text-6xl font-medium tracking-tight mb-6">
@@ -109,8 +109,8 @@ export default function ProgramPage() {
               id={prog.id}
               className={`rounded-3xl overflow-hidden transition-all duration-500 shadow-md ${
                 prog.isRecommended
-                  ? "border border-[#D3AD3B]/40 bg-white shadow-xl shadow-[#D3AD3B]/5"
-                  : "border border-[#1A1A2E]/5 bg-white"
+                  ? "border border-[#E5A81E]/40 bg-white shadow-xl shadow-[#E5A81E]/5"
+                  : "border border-[#0B3521]/5 bg-white"
               }`}
             >
               <div className="grid lg:grid-cols-12 gap-8 items-stretch">
@@ -123,14 +123,14 @@ export default function ProgramPage() {
                     className="object-cover object-center"
                     sizes="(max-width: 1024px) 100vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A2E]/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B3521]/70 via-transparent to-transparent" />
                   <div className="absolute top-6 left-6">
-                    <span className="text-[10px] tracking-widest uppercase font-semibold text-[#1A1A2E] bg-white/95 backdrop-blur-sm px-3.5 py-1.5 rounded-full shadow-sm">
+                    <span className="text-[10px] tracking-widest uppercase font-semibold text-[#0B3521] bg-white/95 backdrop-blur-sm px-3.5 py-1.5 rounded-full shadow-sm">
                       {prog.level}
                     </span>
                   </div>
                   {prog.isRecommended && (
-                    <div className="absolute bottom-6 left-6 bg-[#D3AD3B] text-white text-[10px] tracking-widest uppercase font-semibold px-3.5 py-1.5 rounded-full shadow-md">
+                    <div className="absolute bottom-6 left-6 bg-[#E5A81E] text-white text-[10px] tracking-widest uppercase font-semibold px-3.5 py-1.5 rounded-full shadow-md">
                       Paling Diminati
                     </div>
                   )}
@@ -139,10 +139,10 @@ export default function ProgramPage() {
                 {/* Info Column */}
                 <div className="lg:col-span-5 p-8 lg:p-12 flex flex-col justify-between space-y-6">
                   <div>
-                    <h2 className="font-serif text-2xl sm:text-3xl font-medium text-[#1A1A2E] mb-2 leading-snug">
+                    <h2 className="font-serif text-2xl sm:text-3xl font-medium text-[#0B3521] mb-2 leading-snug">
                       {prog.name}
                     </h2>
-                    <p className="text-xs font-semibold text-[#CA9667] uppercase tracking-wider mb-4">
+                    <p className="text-xs font-semibold text-[#0A8B46] uppercase tracking-wider mb-4">
                       {prog.tagline}
                     </p>
                     <p className="text-sm text-[#2B2825]/80 leading-relaxed font-light">
@@ -151,13 +151,13 @@ export default function ProgramPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-[10px] font-bold text-[#CA9667] uppercase tracking-widest mb-3">
+                    <h3 className="text-[10px] font-bold text-[#0A8B46] uppercase tracking-widest mb-3">
                       Fokus &amp; Capaian Santri:
                     </h3>
                     <div className="space-y-3">
                       {prog.highlights.map((h, hIdx) => (
                         <div key={hIdx} className="flex items-start gap-3 text-xs text-[#2B2825]/80 leading-relaxed font-light">
-                          <CheckCircle2 className="w-4 h-4 text-[#D3AD3B] flex-shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-[#E5A81E] flex-shrink-0 mt-0.5" />
                           <span>{h}</span>
                         </div>
                       ))}
@@ -166,40 +166,40 @@ export default function ProgramPage() {
                 </div>
 
                 {/* Meta & CTA Column */}
-                <div className="lg:col-span-3 p-8 lg:p-12 bg-[#FAFAF7] border-t lg:border-t-0 lg:border-l border-[#1A1A2E]/5 flex flex-col justify-between space-y-6">
+                <div className="lg:col-span-3 p-8 lg:p-12 bg-[#FAFAF7] border-t lg:border-t-0 lg:border-l border-[#0B3521]/5 flex flex-col justify-between space-y-6">
                   <div className="space-y-4 text-xs">
                     <div>
-                      <span className="text-[10px] font-bold text-[#CA9667] uppercase tracking-widest block mb-1">
+                      <span className="text-[10px] font-bold text-[#0A8B46] uppercase tracking-widest block mb-1">
                         Kurikulum
                       </span>
-                      <p className="font-medium text-[#1A1A2E] leading-relaxed">
+                      <p className="font-medium text-[#0B3521] leading-relaxed">
                         {prog.kurikulum}
                       </p>
                     </div>
 
-                    <div className="pt-4 border-t border-[#1A1A2E]/10 space-y-2.5">
+                    <div className="pt-4 border-t border-[#0B3521]/10 space-y-2.5">
                       <div className="flex items-center justify-between">
                         <span className="text-[#2B2825]/60 font-light">Masa Studi</span>
-                        <span className="font-medium text-[#1A1A2E]">{prog.durasi}</span>
+                        <span className="font-medium text-[#0B3521]">{prog.durasi}</span>
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-[#2B2825]/60 font-light">Kuota Siswa</span>
-                        <span className="font-bold text-[#D3AD3B]">{prog.quota}</span>
+                        <span className="font-bold text-[#E5A81E]">{prog.quota}</span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="space-y-3 pt-6 border-t border-[#1A1A2E]/10">
+                  <div className="space-y-3 pt-6 border-t border-[#0B3521]/10">
                     <Link
                       href="/ppdb/daftar"
-                      className="w-full bg-[#D3AD3B] hover:bg-[#CA9667] text-white text-xs tracking-widest uppercase font-medium py-3.5 rounded-full transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-[#D3AD3B]/20 text-center"
+                      className="w-full bg-[#E5A81E] hover:bg-[#0A8B46] text-white text-xs tracking-widest uppercase font-medium py-3.5 rounded-full transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-[#E5A81E]/20 text-center"
                     >
                       <span>Daftar Jenjang Ini</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                     <Link
                       href="/kontak"
-                      className="w-full py-2.5 text-xs text-[#2B2825]/70 hover:text-[#1A1A2E] font-medium text-center block transition-colors uppercase tracking-wider border border-[#1A1A2E]/10 hover:border-[#1A1A2E]/30 rounded-full"
+                      className="w-full py-2.5 text-xs text-[#2B2825]/70 hover:text-[#0B3521] font-medium text-center block transition-colors uppercase tracking-wider border border-[#0B3521]/10 hover:border-[#0B3521]/30 rounded-full"
                     >
                       Konsultasi Program
                     </Link>

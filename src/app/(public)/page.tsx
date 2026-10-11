@@ -137,7 +137,7 @@ export default function HomePage() {
     },
     {
       title: "Kampus Hijau 10 Hektar",
-      desc: "Kawasan perbukitan sejuk Cisarua Bogor yang asri, bebas polusi, dan dilengkapi gazebo belajar alam.",
+      desc: "Kawasan perbukitan sejuk Ujungberung, Kota Bandung yang asri, bebas polusi, dan dilengkapi gazebo belajar alam.",
     },
     {
       title: "Koneksi Dedicated Fiber",
@@ -148,7 +148,7 @@ export default function HomePage() {
   const gallery = [
     {
       url: "/images/hero-campus.jpg",
-      title: "Kawasan Kampus Terpadu Pesantren Darul Ulum",
+      title: "Kawasan Kampus Terpadu Pesantren Baitul Hidayah",
     },
     {
       url: "/images/facility-mosque.jpg",
@@ -161,26 +161,36 @@ export default function HomePage() {
   ];
 
   return (
-    <div className="w-full flex flex-col items-center bg-white text-[#2B2825] font-light overflow-x-hidden selection:bg-[#D3AD3B] selection:text-white">
+    <div className="w-full flex flex-col items-center bg-white text-[#2B2825] font-light overflow-x-hidden selection:bg-[#E5A81E] selection:text-white">
       {/* ── SECTION 1: HERO ─────────────────────────────────── */}
-      <section className="relative bg-[#1A1A2E] w-full min-h-[96vh] flex items-center justify-center px-6 md:px-12 pt-40 md:pt-48 pb-36">
+      <section className="relative bg-[#0B3521] w-full min-h-[96vh] flex items-center justify-center px-6 md:px-12 pt-40 md:pt-48 pb-36">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <Image
             src="/images/hero-campus.jpg"
-            alt="Kampus Pesantren Darul Ulum"
+            alt="Kampus Pesantren Baitul Hidayah"
             fill
             priority
             className="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A2E]/80 via-[#1A1A2E]/50 to-[#1A1A2E]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B3521]/80 via-[#0B3521]/50 to-[#0B3521]" />
         </div>
 
         {/* Content */}
         <div className="relative z-10 w-full max-w-4xl mx-auto text-center flex flex-col items-center">
-          <span className="text-[#CA9667] text-xs font-medium uppercase tracking-widest mb-6 block">
-            Pondok Pesantren Modern Darul Ulum
+          <div className="w-20 h-20 md:w-24 md:h-24 mb-5 relative flex items-center justify-center p-2 rounded-2xl bg-white/95 border-2 border-[#E5A81E]/60 shadow-2xl backdrop-blur-sm animate-fadeIn">
+            <Image
+              src="/images/logo.png"
+              alt="Logo Pesantren Baitul Hidayah"
+              width={96}
+              height={96}
+              className="w-auto h-16 md:h-20 object-contain drop-shadow"
+              priority
+            />
+          </div>
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-[#E5A81E]/40 text-[#E5A81E] text-xs font-bold uppercase tracking-widest mb-6">
+            Pondok Pesantren Baitul Hidayah BAHID Bandung
           </span>
           <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl text-white font-medium tracking-tight leading-[1.1] mb-8">
             Membina Generasi Qur&apos;ani.
@@ -190,14 +200,14 @@ export default function HomePage() {
             </span>
           </h1>
           <p className="text-base md:text-xl text-[#FAFAF7]/80 font-light max-w-2xl mx-auto leading-relaxed mb-12">
-            Pendidikan Islam holistik di perbukitan sejuk Bogor yang memadukan
+            Pendidikan Islam holistik di kawasan Ujungberung, Kota Bandung yang memadukan
             tahfidz Al-Qur&apos;an bersanad, sains teknologi modern, dan tradisi kitab kuning klasik.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/ppdb/daftar"
-              className="inline-flex items-center justify-center bg-[#D3AD3B] text-white text-xs font-medium uppercase tracking-widest px-8 py-4 rounded-full hover:bg-[#CA9667] hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-[#D3AD3B]/20"
+              className="inline-flex items-center justify-center bg-[#E5A81E] text-[#0B3521] text-xs font-bold uppercase tracking-widest px-8 py-4 rounded-full hover:bg-[#0A8B46] hover:text-white hover:-translate-y-0.5 transition-all duration-300 shadow-lg shadow-[#0B3521]/20"
             >
               Daftar Santri Baru
             </Link>
@@ -212,30 +222,28 @@ export default function HomePage() {
 
         {/* Floating Quick Admission Widget - Centered with left-1/2 -translate-x-1/2 */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-5xl z-20 px-4 md:px-8 translate-y-1/2">
-          <div className="bg-[#FAFAF7] border border-[#1A1A2E]/10 shadow-2xl p-5 grid grid-cols-1 md:grid-cols-5 gap-3 rounded-2xl">
-            <div className="p-3 border-b md:border-b-0 md:border-r border-[#1A1A2E]/10 flex flex-col justify-center custom-select-wrapper">
-              <label className="text-[10px] tracking-widest uppercase text-[#CA9667] mb-1 font-semibold block">
+          <div className="bg-[#FAFAF7] border border-[#0B3521]/10 shadow-2xl p-5 grid grid-cols-1 md:grid-cols-5 gap-3 rounded-2xl">
+            <div className="p-3 border-b md:border-b-0 md:border-r border-[#0B3521]/10 flex flex-col justify-center custom-select-wrapper">
+              <label className="text-[10px] tracking-widest uppercase text-[#0A8B46] mb-1 font-semibold block">
                 Jenjang Pendidikan
               </label>
               <select
                 value={selectedLevel}
                 onChange={(e) => setSelectedLevel(e.target.value)}
-                className="w-full text-xs font-medium text-[#1A1A2E] bg-transparent outline-none cursor-pointer appearance-none py-1"
+                className="w-full text-xs font-medium text-[#0B3521] bg-transparent outline-none cursor-pointer appearance-none py-1"
               >
-                <option value="MTs Unggulan Tahfidz">MTs Tahfidz (Setingkat SMP)</option>
-                <option value="MA Plus Sains & Riset">MA Plus Sains (Setingkat SMA)</option>
-                <option value="PDF Ulya Salafiyah">PDF Ulya (Kajian Turats)</option>
+                <option value="Madrasah Diniyah Takmiliyah Awaliyah">Madrasah Diniyah Takmiliyah Awaliyah</option>
               </select>
             </div>
 
-            <div className="p-3 border-b md:border-b-0 md:border-r border-[#1A1A2E]/10 flex flex-col justify-center custom-select-wrapper">
-              <label className="text-[10px] tracking-widest uppercase text-[#CA9667] mb-1 font-semibold block">
+            <div className="p-3 border-b md:border-b-0 md:border-r border-[#0B3521]/10 flex flex-col justify-center custom-select-wrapper">
+              <label className="text-[10px] tracking-widest uppercase text-[#0A8B46] mb-1 font-semibold block">
                 Jalur Seleksi
               </label>
               <select
                 value={selectedTrack}
                 onChange={(e) => setSelectedTrack(e.target.value)}
-                className="w-full text-xs font-medium text-[#1A1A2E] bg-transparent outline-none cursor-pointer appearance-none py-1"
+                className="w-full text-xs font-medium text-[#0B3521] bg-transparent outline-none cursor-pointer appearance-none py-1"
               >
                 <option value="Jalur Beasiswa Tahfidz">Jalur Beasiswa Tahfidz</option>
                 <option value="Jalur Prestasi Sains">Jalur Prestasi Sains OSN</option>
@@ -243,27 +251,27 @@ export default function HomePage() {
               </select>
             </div>
 
-            <div className="p-3 border-b md:border-b-0 md:border-r border-[#1A1A2E]/10 flex flex-col justify-center">
-              <label className="text-[10px] tracking-widest uppercase text-[#CA9667] mb-1 font-semibold block">
+            <div className="p-3 border-b md:border-b-0 md:border-r border-[#0B3521]/10 flex flex-col justify-center">
+              <label className="text-[10px] tracking-widest uppercase text-[#0A8B46] mb-1 font-semibold block">
                 Tahun Ajaran
               </label>
-              <span className="text-xs font-medium text-[#1A1A2E] block py-1">
+              <span className="text-xs font-medium text-[#0B3521] block py-1">
                 2026/2027 (Gelombang 1)
               </span>
             </div>
 
-            <div className="p-3 border-b md:border-b-0 border-[#1A1A2E]/10 flex flex-col justify-center">
-              <label className="text-[10px] tracking-widest uppercase text-[#CA9667] mb-1 font-semibold block">
+            <div className="p-3 border-b md:border-b-0 border-[#0B3521]/10 flex flex-col justify-center">
+              <label className="text-[10px] tracking-widest uppercase text-[#0A8B46] mb-1 font-semibold block">
                 Kuota Tersedia
               </label>
-              <span className="text-xs font-bold text-[#D3AD3B] block py-1">
+              <span className="text-xs font-bold text-[#E5A81E] block py-1">
                 Tersisa 150 Kursi
               </span>
             </div>
 
             <Link
               href="/ppdb/daftar"
-              className="bg-[#D3AD3B] text-white text-xs tracking-widest uppercase font-medium hover:bg-[#CA9667] transition-all duration-300 py-3.5 md:py-0 flex items-center justify-center gap-2 rounded-full shadow-md shadow-[#D3AD3B]/20"
+              className="bg-[#E5A81E] text-white text-xs tracking-widest uppercase font-medium hover:bg-[#0A8B46] transition-all duration-300 py-3.5 md:py-0 flex items-center justify-center gap-2 rounded-full shadow-md shadow-[#E5A81E]/20"
             >
               <span>Daftar</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -273,26 +281,26 @@ export default function HomePage() {
       </section>
 
       {/* ── ACCREDITATIONS & AWARDS BANNER ─────────────────── */}
-      <div className="w-full bg-[#FAFAF7] pt-28 pb-12 border-b border-[#1A1A2E]/5 flex justify-center">
+      <div className="w-full bg-[#FAFAF7] pt-28 pb-12 border-b border-[#0B3521]/5 flex justify-center">
         <div className="w-full max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-14 opacity-85">
             <div className="flex items-center gap-2.5 text-xs tracking-widest uppercase text-[#2B2825] font-medium">
-              <Award className="w-4 h-4 text-[#D3AD3B]" />
+              <Award className="w-4 h-4 text-[#E5A81E]" />
               Akreditasi &apos;A&apos; BAN-SM
             </div>
-            <div className="w-1 h-1 bg-[#CA9667] rounded-full hidden md:block" />
+            <div className="w-1 h-1 bg-[#0A8B46] rounded-full hidden md:block" />
             <div className="flex items-center gap-2.5 text-xs tracking-widest uppercase text-[#2B2825] font-medium">
-              <ShieldCheck className="w-4 h-4 text-[#D3AD3B]" />
+              <ShieldCheck className="w-4 h-4 text-[#E5A81E]" />
               Pesantren Mandiri Kemenag RI
             </div>
-            <div className="w-1 h-1 bg-[#CA9667] rounded-full hidden md:block" />
+            <div className="w-1 h-1 bg-[#0A8B46] rounded-full hidden md:block" />
             <div className="flex items-center gap-2.5 text-xs tracking-widest uppercase text-[#2B2825] font-medium">
-              <Star className="w-4 h-4 text-[#D3AD3B]" />
+              <Star className="w-4 h-4 text-[#E5A81E]" />
               Sanad Tahfidz 30 Juz Muttashil
             </div>
-            <div className="w-1 h-1 bg-[#CA9667] rounded-full hidden md:block" />
+            <div className="w-1 h-1 bg-[#0A8B46] rounded-full hidden md:block" />
             <div className="flex items-center gap-2.5 text-xs tracking-widest uppercase text-[#2B2825] font-medium">
-              <Trophy className="w-4 h-4 text-[#D3AD3B]" />
+              <Trophy className="w-4 h-4 text-[#E5A81E]" />
               Medali Emas OSN Fisika 2025
             </div>
           </div>
@@ -302,16 +310,16 @@ export default function HomePage() {
       {/* ── SECTION 2: THE INVITATION (NILAI LUHUR) ────────── */}
       <section className="relative w-full bg-[#FAFAF7] py-24 md:py-36 px-6 overflow-hidden flex flex-col items-center justify-center">
         {/* Decorative Quote Mark */}
-        <div className="absolute top-0 left-4 md:left-24 text-[#CA9667] opacity-[0.04] font-serif text-[18rem] md:text-[26rem] leading-none select-none pointer-events-none">
+        <div className="absolute top-0 left-4 md:left-24 text-[#0A8B46] opacity-[0.04] font-serif text-[18rem] md:text-[26rem] leading-none select-none pointer-events-none">
           &ldquo;
         </div>
 
         <div className="relative z-10 w-full max-w-3xl mx-auto text-center flex flex-col items-center">
-          <h2 className="font-serif text-3xl md:text-5xl text-[#1A1A2E] font-medium tracking-tight mb-8">
+          <h2 className="font-serif text-3xl md:text-5xl text-[#0B3521] font-medium tracking-tight mb-8">
             Ruang pembinaan adab &amp; ilmu yang seimbang.
           </h2>
           <p className="text-lg md:text-xl text-[#2B2825]/80 font-light leading-relaxed mb-6">
-            Di tengah perubahan zaman yang serba cepat, santri Darul Ulum dibekali
+            Di tengah perubahan zaman yang serba cepat, santri Baitul Hidayah dibekali
             keteguhan akidah, hafalan Al-Qur&apos;an yang terjaga, serta kecakapan riset sains modern
             agar mampu memimpin peradaban dengan hikmah dan keteladanan.
           </p>
@@ -322,10 +330,10 @@ export default function HomePage() {
       <section className="w-full bg-white py-24 md:py-36 px-6 md:px-12 flex justify-center">
         <div className="w-full max-w-7xl mx-auto flex flex-col items-center">
           <div className="text-center max-w-2xl mx-auto mb-20">
-            <span className="text-[#CA9667] text-xs font-medium uppercase tracking-widest mb-4 block">
+            <span className="text-[#0A8B46] text-xs font-medium uppercase tracking-widest mb-4 block">
               Empat Pilar Utama
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl text-[#1A1A2E] font-medium tracking-tight mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl text-[#0B3521] font-medium tracking-tight mb-6">
               Fondasi kokoh pembinaan santri unggul.
             </h2>
             <p className="text-base text-[#2B2825]/70 font-light leading-relaxed">
@@ -339,12 +347,12 @@ export default function HomePage() {
               return (
                 <div
                   key={idx}
-                  className="bg-[#FAFAF7] p-8 md:p-10 rounded-2xl border border-[#1A1A2E]/5 hover:border-[#CA9667]/30 hover:bg-white hover:shadow-xl hover:shadow-[#1A1A2E]/5 transition-all duration-500 group flex flex-col items-start"
+                  className="bg-[#FAFAF7] p-8 md:p-10 rounded-2xl border border-[#0B3521]/5 hover:border-[#0A8B46]/30 hover:bg-white hover:shadow-xl hover:shadow-[#0B3521]/5 transition-all duration-500 group flex flex-col items-start"
                 >
-                  <div className="w-12 h-12 rounded-full bg-[#CA9667]/10 flex items-center justify-center mb-8 group-hover:bg-[#CA9667] transition-colors duration-500 text-[#CA9667] group-hover:text-white">
+                  <div className="w-12 h-12 rounded-full bg-[#0A8B46]/10 flex items-center justify-center mb-8 group-hover:bg-[#0A8B46] transition-colors duration-500 text-[#0A8B46] group-hover:text-white">
                     <Icon className="w-5 h-5 stroke-[1.5]" />
                   </div>
-                  <h3 className="font-serif text-xl text-[#1A1A2E] font-medium tracking-tight mb-4">
+                  <h3 className="font-serif text-xl text-[#0B3521] font-medium tracking-tight mb-4">
                     {p.title}
                   </h3>
                   <p className="text-sm text-[#2B2825]/70 font-light leading-relaxed">
@@ -358,20 +366,20 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 4: MEET FOUNDER & SEJARAH (EDITORIAL SPLIT) */}
-      <section className="w-full bg-[#FAFAF7] py-24 md:py-36 px-6 md:px-12 border-y border-[#1A1A2E]/5 flex justify-center">
+      <section className="w-full bg-[#FAFAF7] py-24 md:py-36 px-6 md:px-12 border-y border-[#0B3521]/5 flex justify-center">
         <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           <div className="w-full lg:w-1/2 relative">
-            <div className="absolute inset-0 bg-[#CA9667]/10 rounded-[2rem] translate-x-4 translate-y-4" />
+            <div className="absolute inset-0 bg-[#0A8B46]/10 rounded-[2rem] translate-x-4 translate-y-4" />
             <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
               <Image
                 src="/images/hero-campus.jpg"
-                alt="Sejarah Pesantren Darul Ulum"
+                alt="Sejarah Pesantren Baitul Hidayah"
                 fill
                 className="object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-700"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              <div className="absolute top-6 left-6 bg-[#1A1A2E] text-white p-4 rounded-xl shadow-lg border border-[#D3AD3B]/30">
-                <div className="font-serif text-2xl font-medium tracking-tight text-[#D3AD3B]">
+              <div className="absolute top-6 left-6 bg-[#0B3521] text-white p-4 rounded-xl shadow-lg border border-[#E5A81E]/30">
+                <div className="font-serif text-2xl font-medium tracking-tight text-[#E5A81E]">
                   1981
                 </div>
                 <div className="text-[9px] tracking-widest uppercase text-[#FAFAF7]/70 font-medium mt-1">
@@ -382,16 +390,16 @@ export default function HomePage() {
           </div>
 
           <div className="w-full lg:w-1/2 flex flex-col items-start">
-            <span className="text-[#CA9667] text-xs font-medium uppercase tracking-widest mb-6">
+            <span className="text-[#0A8B46] text-xs font-medium uppercase tracking-widest mb-6">
               Sejarah &amp; Manhaj
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[#1A1A2E] font-medium tracking-tight mb-8 leading-tight">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-[#0B3521] font-medium tracking-tight mb-8 leading-tight">
               Empat dekade membina santri beradab &amp; mendunia.
             </h2>
             <div className="text-base text-[#2B2825]/80 font-light leading-relaxed space-y-6 mb-10">
               <p>
-                Didirikan pada tahun 1981 di kawasan sejuk Cisarua Bogor oleh Al-Maghfurlah KH. Abdul Fattah Alhafidz,
-                Darul Ulum bermula dari halaqah sederhana 12 santri dan kini telah menaungi lebih dari 1.250 santri mukim.
+                Didirikan pada tahun 1981 di kawasan sejuk Ujungberung, Kota Bandung oleh Al-Maghfurlah KH. Abdul Fattah Alhafidz,
+                Baitul Hidayah bermula dari halaqah sederhana 12 santri dan kini telah menaungi lebih dari 1.250 santri mukim.
               </p>
               <p>
                 Kami memegang teguh tradisi keilmuan Islam ahlussunnah wal jama&apos;ah, memuliakan guru, dan senantiasa
@@ -400,24 +408,24 @@ export default function HomePage() {
             </div>
 
             {/* Metrics */}
-            <div className="grid grid-cols-3 gap-6 w-full border-y border-[#1A1A2E]/10 py-6 mb-10">
+            <div className="grid grid-cols-3 gap-6 w-full border-y border-[#0B3521]/10 py-6 mb-10">
               <div>
-                <div className="font-serif text-3xl text-[#1A1A2E] tracking-tight">1.250+</div>
+                <div className="font-serif text-3xl text-[#0B3521] tracking-tight">1.250+</div>
                 <div className="text-[10px] tracking-widest uppercase text-[#2B2825]/60 mt-1">Santri Mukim</div>
               </div>
-              <div className="border-l border-[#1A1A2E]/10 pl-6">
-                <div className="font-serif text-3xl text-[#1A1A2E] tracking-tight">45<span className="text-[#D3AD3B]">+</span></div>
+              <div className="border-l border-[#0B3521]/10 pl-6">
+                <div className="font-serif text-3xl text-[#0B3521] tracking-tight">45<span className="text-[#E5A81E]">+</span></div>
                 <div className="text-[10px] tracking-widest uppercase text-[#2B2825]/60 mt-1">Tahun Khidmah</div>
               </div>
-              <div className="border-l border-[#1A1A2E]/10 pl-6">
-                <div className="font-serif text-3xl text-[#1A1A2E] tracking-tight">100<span className="text-[#D3AD3B]">%</span></div>
+              <div className="border-l border-[#0B3521]/10 pl-6">
+                <div className="font-serif text-3xl text-[#0B3521] tracking-tight">100<span className="text-[#E5A81E]">%</span></div>
                 <div className="text-[10px] tracking-widest uppercase text-[#2B2825]/60 mt-1">Lolos PTN/PTKIN</div>
               </div>
             </div>
 
             <Link
               href="/tentang"
-              className="group inline-flex items-center gap-3 text-[#1A1A2E] font-medium text-sm border-b border-[#1A1A2E]/20 pb-1 hover:border-[#1A1A2E] transition-colors"
+              className="group inline-flex items-center gap-3 text-[#0B3521] font-medium text-sm border-b border-[#0B3521]/20 pb-1 hover:border-[#0B3521] transition-colors"
             >
               <span>Pelajari Profil &amp; Manhaj Pesantren</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -430,10 +438,10 @@ export default function HomePage() {
       <section className="w-full py-24 md:py-36 bg-white flex justify-center" id="programs">
         <div className="w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-[#CA9667] text-xs font-medium uppercase tracking-widest mb-4 block">
+            <span className="text-[#0A8B46] text-xs font-medium uppercase tracking-widest mb-4 block">
               Program Pendidikan
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#1A1A2E] tracking-tight mb-4">
+            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#0B3521] tracking-tight mb-4">
               Pilihan Jenjang Terpadu
             </h2>
             <p className="text-sm text-[#2B2825]/70 font-light">
@@ -447,11 +455,10 @@ export default function HomePage() {
               <button
                 key={idx}
                 onClick={() => setActiveTab(idx)}
-                className={`px-6 py-3 text-xs tracking-widest uppercase font-medium rounded-full transition-all duration-300 cursor-pointer ${
-                  activeTab === idx
-                    ? "bg-[#1A1A2E] text-white shadow-md"
-                    : "bg-[#FAFAF7] text-[#2B2825]/70 hover:bg-[#1A1A2E]/5"
-                }`}
+                className={`px-6 py-3 text-xs tracking-widest uppercase font-medium rounded-full transition-all duration-300 cursor-pointer ${activeTab === idx
+                  ? "bg-[#0B3521] text-white shadow-md"
+                  : "bg-[#FAFAF7] text-[#2B2825]/70 hover:bg-[#0B3521]/5"
+                  }`}
               >
                 {prog.name.split(" ")[0]} {prog.name.split(" ")[1]}
               </button>
@@ -460,7 +467,7 @@ export default function HomePage() {
 
           {/* Active Panel */}
           {programsData[activeTab] && (
-            <div className="w-full grid grid-cols-1 lg:grid-cols-5 gap-10 bg-[#FAFAF7] border border-[#1A1A2E]/5 rounded-3xl overflow-hidden shadow-xl shadow-[#1A1A2E]/5">
+            <div className="w-full grid grid-cols-1 lg:grid-cols-5 gap-10 bg-[#FAFAF7] border border-[#0B3521]/5 rounded-3xl overflow-hidden shadow-xl shadow-[#0B3521]/5">
               <div className="lg:col-span-3 relative h-[360px] lg:h-auto overflow-hidden group">
                 <Image
                   src={programsData[activeTab].image}
@@ -469,17 +476,17 @@ export default function HomePage() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 60vw"
                 />
-                <div className="absolute top-6 left-6 bg-[#1A1A2E] text-white px-3.5 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-medium shadow-md">
+                <div className="absolute top-6 left-6 bg-[#0B3521] text-white px-3.5 py-1.5 rounded-full text-[10px] tracking-widest uppercase font-medium shadow-md">
                   {programsData[activeTab].badge}
                 </div>
               </div>
 
               <div className="lg:col-span-2 p-8 lg:p-12 flex flex-col justify-between">
                 <div>
-                  <span className="text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 block font-semibold">
+                  <span className="text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 block font-semibold">
                     {programsData[activeTab].subtitle}
                   </span>
-                  <h3 className="font-serif text-2xl lg:text-3xl font-medium text-[#1A1A2E] tracking-tight mb-4">
+                  <h3 className="font-serif text-2xl lg:text-3xl font-medium text-[#0B3521] tracking-tight mb-4">
                     {programsData[activeTab].name}
                   </h3>
                   <p className="text-sm text-[#2B2825]/80 mb-8 leading-relaxed font-light">
@@ -489,16 +496,16 @@ export default function HomePage() {
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3.5 gap-x-4 mb-8">
                     {programsData[activeTab].specs.map((spec, sIdx) => (
                       <li key={sIdx} className="flex items-center gap-2.5 text-xs text-[#2B2825] font-light">
-                        <CheckCircle2 className="w-4 h-4 text-[#D3AD3B] flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-[#E5A81E] flex-shrink-0" />
                         <span>{spec}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="pt-6 border-t border-[#1A1A2E]/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <div className="pt-6 border-t border-[#0B3521]/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                   <div>
-                    <div className="font-serif text-2xl text-[#1A1A2E] tracking-tight">
+                    <div className="font-serif text-2xl text-[#0B3521] tracking-tight">
                       {programsData[activeTab].fee}
                       <span className="text-xs font-sans font-light text-[#2B2825]/60 tracking-normal ml-1">
                         {programsData[activeTab].feeLabel}
@@ -507,7 +514,7 @@ export default function HomePage() {
                   </div>
                   <Link
                     href={programsData[activeTab].href}
-                    className="w-full sm:w-auto bg-[#D3AD3B] text-white text-xs tracking-widest uppercase font-medium hover:bg-[#CA9667] transition-all px-6 py-3.5 rounded-full shadow-md text-center"
+                    className="w-full sm:w-auto bg-[#E5A81E] text-white text-xs tracking-widest uppercase font-medium hover:bg-[#0A8B46] transition-all px-6 py-3.5 rounded-full shadow-md text-center"
                   >
                     Daftar Jenjang Ini
                   </Link>
@@ -519,10 +526,10 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION 5: SINTESIS SAINS & AUDIO SHOWCASE (DARK HERO SECTION) */}
-      <section className="w-full bg-[#1A1A2E] py-24 md:py-36 px-6 md:px-12 text-white overflow-hidden flex justify-center">
+      <section className="w-full bg-[#0B3521] py-24 md:py-36 px-6 md:px-12 text-white overflow-hidden flex justify-center">
         <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           <div className="w-full lg:w-1/2 flex flex-col items-start">
-            <span className="text-[#CA9667] text-xs font-medium uppercase tracking-widest mb-6">
+            <span className="text-[#0A8B46] text-xs font-medium uppercase tracking-widest mb-6">
               Sintesis Sains &amp; Qur&apos;ani
             </span>
             <h2 className="font-serif text-3xl md:text-5xl font-medium tracking-tight mb-8 leading-tight">
@@ -536,7 +543,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Link
                 href="/ppdb/daftar"
-                className="inline-flex items-center justify-center gap-3 bg-[#D3AD3B] text-white px-8 py-4 rounded-full text-xs font-medium uppercase tracking-widest hover:bg-[#CA9667] transition-all shadow-lg shadow-[#D3AD3B]/20"
+                className="inline-flex items-center justify-center gap-3 bg-[#E5A81E] text-white px-8 py-4 rounded-full text-xs font-medium uppercase tracking-widest hover:bg-[#0A8B46] transition-all shadow-lg shadow-[#E5A81E]/20"
               >
                 Daftar Beasiswa Riset
               </Link>
@@ -561,8 +568,8 @@ export default function HomePage() {
                 />
               </div>
               <div className="flex flex-col justify-center text-center md:text-left flex-1 w-full">
-                <span className="text-[#D3AD3B] text-xs uppercase tracking-wider font-medium mb-2">
-                  Murottal Santri Darul Ulum
+                <span className="text-[#E5A81E] text-xs uppercase tracking-wider font-medium mb-2">
+                  Murottal Santri Baitul Hidayah
                 </span>
                 <h4 className="font-serif text-lg text-white font-medium mb-1 leading-tight">
                   Surah Ar-Rahman (Ayat 1–30)
@@ -580,12 +587,12 @@ export default function HomePage() {
                   </button>
                   <button
                     onClick={() => setIsPlaying(!isPlaying)}
-                    className="w-12 h-12 rounded-full bg-white text-[#1A1A2E] flex items-center justify-center hover:scale-105 transition-transform shadow-lg cursor-pointer"
+                    className="w-12 h-12 rounded-full bg-white text-[#0B3521] flex items-center justify-center hover:scale-105 transition-transform shadow-lg cursor-pointer"
                     title={isPlaying ? "Jeda" : "Putar"}
                   >
-                    {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 fill-[#1A1A2E] ml-0.5" />}
+                    {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 fill-[#0B3521] ml-0.5" />}
                   </button>
-                  <span className="text-xs font-mono text-[#D3AD3B]">
+                  <span className="text-xs font-mono text-[#E5A81E]">
                     {isPlaying ? "02:45 / 07:12" : "00:00 / 07:12"}
                   </span>
                 </div>
@@ -593,7 +600,7 @@ export default function HomePage() {
                 {/* Progress Bar */}
                 <div className="w-full h-1 bg-white/10 rounded-full mt-5 overflow-hidden">
                   <div
-                    className="h-full bg-[#D3AD3B] rounded-full transition-all duration-300"
+                    className="h-full bg-[#E5A81E] rounded-full transition-all duration-300"
                     style={{ width: isPlaying ? "38%" : "8%" }}
                   />
                 </div>
@@ -604,19 +611,19 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION: FACILITIES 8-GRID ─────────────────────── */}
-      <section className="w-full py-24 md:py-36 bg-white border-b border-[#1A1A2E]/5 flex justify-center" id="facilities">
+      <section className="w-full py-24 md:py-36 bg-white border-b border-[#0B3521]/5 flex justify-center" id="facilities">
         <div className="w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center">
-          <div className="w-full mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#1A1A2E]/10 pb-8">
+          <div className="w-full mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#0B3521]/10 pb-8">
             <div>
-              <span className="text-[#CA9667] text-xs tracking-widest uppercase font-medium block mb-3">
+              <span className="text-[#0A8B46] text-xs tracking-widest uppercase font-medium block mb-3">
                 Sarana &amp; Fasilitas
               </span>
-              <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#1A1A2E] tracking-tight">
+              <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#0B3521] tracking-tight">
                 Kampus Representatif &amp; Asri
               </h2>
             </div>
             <p className="text-sm text-[#2B2825]/70 max-w-sm font-light">
-              Lingkungan belajar 10 hektar di perbukitan Cisarua Bogor dengan sarana modern terpadu.
+              Lingkungan belajar 10 hektar di perbukitan Ujungberung, Kota Bandung dengan sarana modern terpadu.
             </p>
           </div>
 
@@ -624,13 +631,13 @@ export default function HomePage() {
             {amenities.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#FAFAF7] p-8 rounded-2xl border border-[#1A1A2E]/5 hover:border-[#CA9667]/30 hover:bg-white hover:shadow-xl hover:shadow-[#1A1A2E]/5 transition-all duration-500 group flex flex-col justify-between"
+                className="bg-[#FAFAF7] p-8 rounded-2xl border border-[#0B3521]/5 hover:border-[#0A8B46]/30 hover:bg-white hover:shadow-xl hover:shadow-[#0B3521]/5 transition-all duration-500 group flex flex-col justify-between"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-full bg-[#CA9667]/10 flex items-center justify-center font-serif text-[#CA9667] font-semibold text-sm mb-6 group-hover:bg-[#CA9667] group-hover:text-white transition-colors">
+                  <div className="w-10 h-10 rounded-full bg-[#0A8B46]/10 flex items-center justify-center font-serif text-[#0A8B46] font-semibold text-sm mb-6 group-hover:bg-[#0A8B46] group-hover:text-white transition-colors">
                     0{idx + 1}
                   </div>
-                  <h3 className="text-base font-medium text-[#1A1A2E] mb-2 font-serif">
+                  <h3 className="text-base font-medium text-[#0B3521] mb-2 font-serif">
                     {item.title}
                   </h3>
                   <p className="text-xs text-[#2B2825]/70 leading-relaxed font-light">
@@ -646,18 +653,18 @@ export default function HomePage() {
       {/* ── SECTION: GALLERY ───────────────────────────────── */}
       <section className="w-full py-24 md:py-36 bg-[#FAFAF7] flex justify-center" id="gallery">
         <div className="w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center">
-          <div className="w-full flex justify-between items-end mb-12 border-b border-[#1A1A2E]/10 pb-8">
+          <div className="w-full flex justify-between items-end mb-12 border-b border-[#0B3521]/10 pb-8">
             <div>
-              <span className="text-[#CA9667] text-xs tracking-widest uppercase font-medium block mb-3">
+              <span className="text-[#0A8B46] text-xs tracking-widest uppercase font-medium block mb-3">
                 Dokumentasi Visual
               </span>
-              <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#1A1A2E] tracking-tight">
+              <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#0B3521] tracking-tight">
                 Galeri Suasana Kampus
               </h2>
             </div>
             <Link
               href="/fasilitas"
-              className="hidden sm:inline-flex items-center gap-2 text-xs tracking-widest uppercase font-medium text-[#1A1A2E] border-b border-[#1A1A2E]/20 pb-0.5 hover:border-[#1A1A2E] transition-colors"
+              className="hidden sm:inline-flex items-center gap-2 text-xs tracking-widest uppercase font-medium text-[#0B3521] border-b border-[#0B3521]/20 pb-0.5 hover:border-[#0B3521] transition-colors"
             >
               <span>Lihat Seluruh Fasilitas</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -677,7 +684,7 @@ export default function HomePage() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 66vw"
               />
-              <div className="absolute inset-0 bg-[#1A1A2E]/0 group-hover:bg-[#1A1A2E]/40 transition-colors duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-[#0B3521]/0 group-hover:bg-[#0B3521]/40 transition-colors duration-300 flex items-center justify-center">
                 <Maximize2 className="text-white w-8 h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </div>
@@ -694,7 +701,7 @@ export default function HomePage() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-[#1A1A2E]/0 group-hover:bg-[#1A1A2E]/40 transition-colors duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-[#0B3521]/0 group-hover:bg-[#0B3521]/40 transition-colors duration-300 flex items-center justify-center">
                 <Maximize2 className="text-white w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </div>
@@ -711,7 +718,7 @@ export default function HomePage() {
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 50vw, 33vw"
               />
-              <div className="absolute inset-0 bg-[#1A1A2E]/0 group-hover:bg-[#1A1A2E]/40 transition-colors duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-[#0B3521]/0 group-hover:bg-[#0B3521]/40 transition-colors duration-300 flex items-center justify-center">
                 <Maximize2 className="text-white w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
             </div>
@@ -723,10 +730,10 @@ export default function HomePage() {
       <section className="w-full py-24 md:py-36 bg-white flex justify-center" id="offers">
         <div className="w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-[#CA9667] text-xs tracking-widest uppercase font-medium block mb-4">
+            <span className="text-[#0A8B46] text-xs tracking-widest uppercase font-medium block mb-4">
               Penerimaan Santri Baru 2026/2027
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#1A1A2E] tracking-tight mb-4">
+            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#0B3521] tracking-tight mb-4">
               Jalur Masuk &amp; Skema Beasiswa
             </h2>
             <p className="text-sm text-[#2B2825]/70 font-light">
@@ -736,7 +743,7 @@ export default function HomePage() {
 
           <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Offer 1 */}
-            <div className="bg-[#FAFAF7] rounded-2xl border border-[#1A1A2E]/5 shadow-sm overflow-hidden flex flex-col group hover:border-[#CA9667]/30 hover:bg-white hover:shadow-xl transition-all duration-500">
+            <div className="bg-[#FAFAF7] rounded-2xl border border-[#0B3521]/5 shadow-sm overflow-hidden flex flex-col group hover:border-[#0A8B46]/30 hover:bg-white hover:shadow-xl transition-all duration-500">
               <div className="h-52 overflow-hidden relative">
                 <Image
                   src="/images/program-tahfidz.jpg"
@@ -745,26 +752,26 @@ export default function HomePage() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] tracking-widest uppercase font-medium text-[#1A1A2E] shadow-sm">
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] tracking-widest uppercase font-medium text-[#0B3521] shadow-sm">
                   Beasiswa Penuh
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-grow">
-                <h3 className="font-serif text-xl font-medium text-[#1A1A2E] tracking-tight mb-3">
+                <h3 className="font-serif text-xl font-medium text-[#0B3521] tracking-tight mb-3">
                   Jalur Tahfidz Al-Qur&apos;an
                 </h3>
                 <p className="text-xs text-[#2B2825]/70 leading-relaxed mb-6 flex-grow font-light">
                   Bebas biaya pendidikan &amp; asrama bagi calon santri dengan hafalan minimal 5–10 Juz mutqin.
                 </p>
-                <div className="flex items-center justify-between border-t border-[#1A1A2E]/10 pt-6">
+                <div className="flex items-center justify-between border-t border-[#0B3521]/10 pt-6">
                   <div>
-                    <div className="text-sm font-semibold text-[#1A1A2E]">
+                    <div className="text-sm font-semibold text-[#0B3521]">
                       Infaq Rp 0,- (Full)
                     </div>
                   </div>
                   <Link
                     href="/ppdb/daftar"
-                    className="text-xs tracking-widest uppercase font-medium text-[#D3AD3B] hover:text-[#CA9667] transition-colors"
+                    className="text-xs tracking-widest uppercase font-medium text-[#E5A81E] hover:text-[#0A8B46] transition-colors"
                   >
                     Daftar &rarr;
                   </Link>
@@ -773,7 +780,7 @@ export default function HomePage() {
             </div>
 
             {/* Offer 2 */}
-            <div className="bg-[#FAFAF7] rounded-2xl border border-[#1A1A2E]/5 shadow-sm overflow-hidden flex flex-col group hover:border-[#CA9667]/30 hover:bg-white hover:shadow-xl transition-all duration-500">
+            <div className="bg-[#FAFAF7] rounded-2xl border border-[#0B3521]/5 shadow-sm overflow-hidden flex flex-col group hover:border-[#0A8B46]/30 hover:bg-white hover:shadow-xl transition-all duration-500">
               <div className="h-52 overflow-hidden relative">
                 <Image
                   src="/images/facility-lab.jpg"
@@ -782,26 +789,26 @@ export default function HomePage() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] tracking-widest uppercase font-medium text-[#1A1A2E] shadow-sm">
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] tracking-widest uppercase font-medium text-[#0B3521] shadow-sm">
                   Prestasi Sains
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-grow">
-                <h3 className="font-serif text-xl font-medium text-[#1A1A2E] tracking-tight mb-3">
+                <h3 className="font-serif text-xl font-medium text-[#0B3521] tracking-tight mb-3">
                   Jalur Riset &amp; OSN
                 </h3>
                 <p className="text-xs text-[#2B2825]/70 leading-relaxed mb-6 flex-grow font-light">
                   Potongan infaq sarana 50% bagi juara olimpiade sains/matematika tingkat kabupaten/provinsi.
                 </p>
-                <div className="flex items-center justify-between border-t border-[#1A1A2E]/10 pt-6">
+                <div className="flex items-center justify-between border-t border-[#0B3521]/10 pt-6">
                   <div>
-                    <div className="text-sm font-semibold text-[#1A1A2E]">
+                    <div className="text-sm font-semibold text-[#0B3521]">
                       Potongan 50%
                     </div>
                   </div>
                   <Link
                     href="/ppdb/daftar"
-                    className="text-xs tracking-widest uppercase font-medium text-[#D3AD3B] hover:text-[#CA9667] transition-colors"
+                    className="text-xs tracking-widest uppercase font-medium text-[#E5A81E] hover:text-[#0A8B46] transition-colors"
                   >
                     Daftar &rarr;
                   </Link>
@@ -810,7 +817,7 @@ export default function HomePage() {
             </div>
 
             {/* Offer 3 */}
-            <div className="bg-[#FAFAF7] rounded-2xl border border-[#1A1A2E]/5 shadow-sm overflow-hidden flex flex-col group hover:border-[#CA9667]/30 hover:bg-white hover:shadow-xl transition-all duration-500">
+            <div className="bg-[#FAFAF7] rounded-2xl border border-[#0B3521]/5 shadow-sm overflow-hidden flex flex-col group hover:border-[#0A8B46]/30 hover:bg-white hover:shadow-xl transition-all duration-500">
               <div className="h-52 overflow-hidden relative">
                 <Image
                   src="/images/hero-campus.jpg"
@@ -819,26 +826,26 @@ export default function HomePage() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
-                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] tracking-widest uppercase font-medium text-[#1A1A2E] shadow-sm">
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] tracking-widest uppercase font-medium text-[#0B3521] shadow-sm">
                   Reguler Asrama
                 </div>
               </div>
               <div className="p-8 flex flex-col flex-grow">
-                <h3 className="font-serif text-xl font-medium text-[#1A1A2E] tracking-tight mb-3">
+                <h3 className="font-serif text-xl font-medium text-[#0B3521] tracking-tight mb-3">
                   Jalur Reguler Terpadu
                 </h3>
                 <p className="text-xs text-[#2B2825]/70 leading-relaxed mb-6 flex-grow font-light">
                   Seleksi tes potensi akademik, tes membaca Al-Qur&apos;an, dan kesiapan tinggal di asrama modern.
                 </p>
-                <div className="flex items-center justify-between border-t border-[#1A1A2E]/10 pt-6">
+                <div className="flex items-center justify-between border-t border-[#0B3521]/10 pt-6">
                   <div>
-                    <div className="text-sm font-semibold text-[#1A1A2E]">
+                    <div className="text-sm font-semibold text-[#0B3521]">
                       Infaq Rp 250.000
                     </div>
                   </div>
                   <Link
                     href="/ppdb/daftar"
-                    className="text-xs tracking-widest uppercase font-medium text-[#D3AD3B] hover:text-[#CA9667] transition-colors"
+                    className="text-xs tracking-widest uppercase font-medium text-[#E5A81E] hover:text-[#0A8B46] transition-colors"
                   >
                     Daftar &rarr;
                   </Link>
@@ -850,13 +857,13 @@ export default function HomePage() {
       </section>
 
       {/* ── SECTION: CONTACT & SECRETARIAT ─────────────────── */}
-      <section className="w-full py-24 md:py-36 bg-[#FAFAF7] border-t border-[#1A1A2E]/5 flex justify-center" id="contact">
+      <section className="w-full py-24 md:py-36 bg-[#FAFAF7] border-t border-[#0B3521]/5 flex justify-center" id="contact">
         <div className="w-full max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <span className="text-[#CA9667] text-xs tracking-widest uppercase font-medium block mb-4">
+            <span className="text-[#0A8B46] text-xs tracking-widest uppercase font-medium block mb-4">
               Sekretariat &amp; Informasi
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#1A1A2E] tracking-tight mb-8">
+            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#0B3521] tracking-tight mb-8">
               Layanan Informasi &amp; Kunjungan Kampus
             </h2>
 
@@ -864,12 +871,12 @@ export default function HomePage() {
               className="space-y-5"
               onSubmit={(e) => {
                 e.preventDefault();
-                alert("Pesan Anda telah diterima oleh panitia sekretariat Darul Ulum.");
+                alert("Pesan Anda telah diterima oleh panitia sekretariat Baitul Hidayah.");
               }}
             >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                  <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                     Nama Wali Santri
                   </label>
                   <input
@@ -880,20 +887,20 @@ export default function HomePage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                  <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                     Nomor WhatsApp
                   </label>
                   <input
                     type="tel"
                     required
-                    placeholder="081234567890"
+                    placeholder="085196045409"
                     className="input-editorial"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                   Alamat Email
                 </label>
                 <input
@@ -905,7 +912,7 @@ export default function HomePage() {
               </div>
 
               <div className="custom-select-wrapper">
-                <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                   Topik Pertanyaan
                 </label>
                 <select className="input-editorial appearance-none cursor-pointer">
@@ -917,7 +924,7 @@ export default function HomePage() {
               </div>
 
               <div>
-                <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                   Isi Pesan
                 </label>
                 <textarea
@@ -930,46 +937,46 @@ export default function HomePage() {
 
               <button
                 type="submit"
-                className="bg-[#D3AD3B] hover:bg-[#CA9667] text-white text-xs tracking-widest uppercase font-medium px-8 py-4 rounded-full transition-all duration-300 shadow-md shadow-[#D3AD3B]/20 cursor-pointer w-full sm:w-auto"
+                className="bg-[#E5A81E] hover:bg-[#0A8B46] text-white text-xs tracking-widest uppercase font-medium px-8 py-4 rounded-full transition-all duration-300 shadow-md shadow-[#E5A81E]/20 cursor-pointer w-full sm:w-auto"
               >
                 Kirim Pesan
               </button>
             </form>
           </div>
 
-          <div className="lg:pl-12 lg:border-l border-[#1A1A2E]/10 flex flex-col justify-center space-y-10">
+          <div className="lg:pl-12 lg:border-l border-[#0B3521]/10 flex flex-col justify-center space-y-10">
             <div className="space-y-6">
               <div>
-                <h3 className="text-xs tracking-widest uppercase text-[#CA9667] font-semibold mb-2">
+                <h3 className="text-xs tracking-widest uppercase text-[#0A8B46] font-semibold mb-2">
                   Alamat Kampus
                 </h3>
-                <p className="text-lg font-serif text-[#1A1A2E] tracking-tight font-medium">
-                  Pondok Pesantren Modern Darul Ulum
+                <p className="text-lg font-serif text-[#0B3521] tracking-tight font-medium">
+                  Pondok Pesantren Baitul Hidayah
                 </p>
-                <p className="text-sm text-[#2B2825]/70 mt-1 font-light leading-relaxed">
-                  Jl. Pesantren Luhur No. 99, Cisarua, Bogor, Jawa Barat 16750
+                <p className="text-sm text-[#1A281E]/75 mt-1 font-light leading-relaxed">
+                  Jl. Ciporeat Andir kulon kelurahan pasanggrahan kec.ujungberung kota bandung
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xs tracking-widest uppercase text-[#CA9667] font-semibold mb-2">
+                <h3 className="text-xs tracking-widest uppercase text-[#0A8B46] font-semibold mb-2">
                   Layanan WhatsApp PPDB
                 </h3>
                 <a
-                  href="https://wa.me/6281234567890"
+                  href="https://wa.me/6285196045409"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-lg font-serif text-[#1A1A2E] tracking-tight hover:text-[#D3AD3B] transition-colors font-medium"
+                  className="text-lg font-serif text-[#0B3521] tracking-tight hover:text-[#0A8B46] transition-colors font-semibold"
                 >
-                  +62 812-3456-7890
+                  085196045409
                 </a>
               </div>
             </div>
 
             {/* Map Frame */}
-            <div className="w-full h-64 border border-[#1A1A2E]/10 bg-white rounded-2xl relative overflow-hidden shadow-md">
+            <div className="w-full h-64 border border-[#0B3521]/15 bg-white rounded-2xl relative overflow-hidden shadow-md">
               <iframe
-                src="https://www.google.com/maps?q=Cisarua,+Bogor,+West+Java&output=embed"
+                src="https://www.google.com/maps?q=Jl.+Ciporeat+Pasanggrahan+Ujungberung+Kota+Bandung&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -985,12 +992,12 @@ export default function HomePage() {
       {/* ── LIGHTBOX POPUP ────────────────────────────────── */}
       {lightboxImg && (
         <div
-          className="fixed inset-0 bg-[#1A1A2E]/95 z-[5000] flex items-center justify-center backdrop-blur-md p-4"
+          className="fixed inset-0 bg-[#0B3521]/95 z-[5000] flex items-center justify-center backdrop-blur-md p-4"
           onClick={() => setLightboxImg(null)}
         >
           <button
             onClick={() => setLightboxImg(null)}
-            className="absolute top-6 right-6 text-white hover:text-[#D3AD3B] transition-colors p-2"
+            className="absolute top-6 right-6 text-white hover:text-[#E5A81E] transition-colors p-2"
           >
             <X className="w-8 h-8" />
           </button>

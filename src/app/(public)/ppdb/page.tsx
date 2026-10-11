@@ -13,9 +13,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Penerimaan Santri Baru (PPDB) 2026/2027 — Pesantren Modern Darul Ulum",
+  title: "Penerimaan Santri Baru (PPDB) 2026/2027 — Pesantren Baitul Hidayah",
   description:
-    "Informasi lengkap pendaftaran santri baru Pondok Pesantren Modern Darul Ulum. Jadwal gelombang, syarat berkas, beasiswa tahfidz, dan alur pendaftaran online.",
+    "Informasi lengkap pendaftaran santri baru Pondok Pesantren Baitul Hidayah. Jadwal gelombang, syarat berkas, beasiswa tahfidz, dan alur pendaftaran online.",
 };
 
 const gelombangList = [
@@ -118,9 +118,9 @@ const faqs = [
 
 export default function PPDBPage() {
   return (
-    <div className="w-full flex flex-col items-center bg-white text-[#2B2825] font-light overflow-x-hidden selection:bg-[#D3AD3B] selection:text-white">
+    <div className="w-full flex flex-col items-center bg-white text-[#2B2825] font-light overflow-x-hidden selection:bg-[#E5A81E] selection:text-white">
       {/* ── HEADER ────────────────────────────────────────── */}
-      <header className="relative w-full min-h-[48vh] flex items-center justify-center pt-44 md:pt-52 pb-20 md:pb-28 px-6 md:px-12 bg-[#1A1A2E] text-white overflow-hidden text-center">
+      <header className="relative w-full min-h-[48vh] flex items-center justify-center pt-44 md:pt-52 pb-20 md:pb-28 px-6 md:px-12 bg-[#0B3521] text-white overflow-hidden text-center">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero-campus.jpg"
@@ -130,11 +130,11 @@ export default function PPDBPage() {
             className="w-full h-full object-cover opacity-25 mix-blend-luminosity"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A2E]/80 via-[#1A1A2E]/50 to-[#1A1A2E]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B3521]/80 via-[#0B3521]/50 to-[#0B3521]" />
         </div>
 
         <div className="relative z-10 w-full max-w-4xl mx-auto text-center flex flex-col items-center">
-          <span className="text-[#CA9667] text-xs font-medium uppercase tracking-widest mb-4 block">
+          <span className="text-[#E5A81E] text-xs font-medium uppercase tracking-widest mb-4 block">
             PPDB 2026/2027
           </span>
           <h1 className="font-serif text-4xl sm:text-6xl font-medium tracking-tight mb-6">
@@ -148,7 +148,7 @@ export default function PPDBPage() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/ppdb/daftar"
-              className="inline-flex items-center justify-center text-xs tracking-widest uppercase font-medium bg-[#D3AD3B] text-white px-8 py-4 rounded-full hover:bg-[#CA9667] transition-all duration-300 shadow-md shadow-[#D3AD3B]/20"
+              className="inline-flex items-center justify-center text-xs tracking-widest uppercase font-medium bg-[#E5A81E] text-white px-8 py-4 rounded-full hover:bg-[#0A8B46] transition-all duration-300 shadow-md shadow-[#E5A81E]/20"
             >
               Mulai Pendaftaran Online
             </Link>
@@ -156,7 +156,7 @@ export default function PPDBPage() {
               href="/ppdb/cek-status"
               className="inline-flex items-center justify-center text-xs tracking-widest uppercase font-medium bg-transparent text-white border border-white/20 px-8 py-4 rounded-full hover:bg-white/10 transition-colors backdrop-blur-sm"
             >
-              <Search className="w-4 h-4 mr-2 text-[#D3AD3B]" />
+              <Search className="w-4 h-4 mr-2 text-[#E5A81E]" />
               Cek Status Berkas
             </Link>
           </div>
@@ -167,10 +167,10 @@ export default function PPDBPage() {
       <section className="w-full py-24 md:py-32 bg-[#FAFAF7] flex justify-center">
         <div className="w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-[#CA9667] text-xs tracking-widest uppercase font-medium block mb-4">
+            <span className="text-[#0A8B46] text-xs tracking-widest uppercase font-medium block mb-4">
               Jadwal &amp; Gelombang
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#1A1A2E] tracking-tight mb-4">
+            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#0B3521] tracking-tight mb-4">
               Pilihan Gelombang Pendaftaran
             </h2>
             <p className="text-sm text-[#2B2825]/70 font-light">
@@ -184,12 +184,12 @@ export default function PPDBPage() {
                 key={idx}
                 className={`p-8 md:p-10 rounded-3xl relative flex flex-col justify-between transition-all duration-500 shadow-sm ${
                   g.isPrimary
-                    ? "border border-[#D3AD3B]/50 bg-white shadow-xl shadow-[#D3AD3B]/5"
-                    : "border border-[#1A1A2E]/5 bg-white"
+                    ? "border border-[#E5A81E]/50 bg-white shadow-xl shadow-[#E5A81E]/5"
+                    : "border border-[#0B3521]/5 bg-white"
                 }`}
               >
                 {g.isPrimary && (
-                  <div className="absolute top-0 right-8 -translate-y-1/2 bg-[#1A1A2E] text-white font-medium text-[10px] tracking-widest uppercase px-4 py-1.5 rounded-full shadow-md">
+                  <div className="absolute top-0 right-8 -translate-y-1/2 bg-[#0B3521] text-white font-medium text-[10px] tracking-widest uppercase px-4 py-1.5 rounded-full shadow-md">
                     Rekomendasi
                   </div>
                 )}
@@ -199,32 +199,32 @@ export default function PPDBPage() {
                     <span
                       className={`text-[10px] font-semibold tracking-widest uppercase px-3 py-1 rounded-full ${
                         g.isPrimary
-                          ? "bg-[#D3AD3B]/10 text-[#D3AD3B]"
-                          : "bg-[#1A1A2E]/5 text-[#2B2825]/60"
+                          ? "bg-[#E5A81E]/10 text-[#E5A81E]"
+                          : "bg-[#0B3521]/5 text-[#2B2825]/60"
                       }`}
                     >
                       {g.status}
                     </span>
                     <span className="text-xs text-[#2B2825]/60 font-light flex items-center gap-1.5">
-                      <Users className="w-3.5 h-3.5 text-[#CA9667]" />
+                      <Users className="w-3.5 h-3.5 text-[#0A8B46]" />
                       Kuota: {g.kuota}
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-2xl font-medium text-[#1A1A2E] mb-2">
+                  <h3 className="font-serif text-2xl font-medium text-[#0B3521] mb-2">
                     {g.nama}
                   </h3>
 
                   <div className="flex items-center gap-2 text-[#2B2825]/60 text-xs mb-6 font-light">
-                    <Calendar className="w-3.5 h-3.5 text-[#CA9667]" />
+                    <Calendar className="w-3.5 h-3.5 text-[#0A8B46]" />
                     <span>{g.periode}</span>
                   </div>
 
-                  <div className="p-5 bg-[#FAFAF7] border border-[#1A1A2E]/5 rounded-2xl mb-6">
-                    <span className="text-[10px] text-[#CA9667] uppercase tracking-widest font-semibold block mb-1">
+                  <div className="p-5 bg-[#FAFAF7] border border-[#0B3521]/5 rounded-2xl mb-6">
+                    <span className="text-[10px] text-[#0A8B46] uppercase tracking-widest font-semibold block mb-1">
                       Infaq Pendaftaran &amp; Seleksi
                     </span>
-                    <span className="text-2xl font-serif text-[#1A1A2E] font-medium">
+                    <span className="text-2xl font-serif text-[#0B3521] font-medium">
                       {g.biayaPendaftaran}
                     </span>
                   </div>
@@ -232,7 +232,7 @@ export default function PPDBPage() {
                   <ul className="space-y-3 mb-8">
                     {g.benefit.map((b, bIdx) => (
                       <li key={bIdx} className="flex items-start gap-2.5 text-xs text-[#2B2825]/80 leading-relaxed font-light">
-                        <CheckCircle2 className="w-4 h-4 text-[#D3AD3B] mt-0.5 flex-shrink-0" />
+                        <CheckCircle2 className="w-4 h-4 text-[#E5A81E] mt-0.5 flex-shrink-0" />
                         <span>{b}</span>
                       </li>
                     ))}
@@ -243,8 +243,8 @@ export default function PPDBPage() {
                   href="/ppdb/daftar"
                   className={`w-full py-3.5 text-xs tracking-widest uppercase font-medium flex items-center justify-center gap-2 rounded-full transition-all duration-300 ${
                     g.isPrimary
-                      ? "bg-[#D3AD3B] hover:bg-[#CA9667] text-white shadow-md shadow-[#D3AD3B]/20"
-                      : "bg-white text-[#1A1A2E] border border-[#1A1A2E]/20 hover:bg-[#1A1A2E] hover:text-white"
+                      ? "bg-[#E5A81E] hover:bg-[#0A8B46] text-white shadow-md shadow-[#E5A81E]/20"
+                      : "bg-white text-[#0B3521] border border-[#0B3521]/20 hover:bg-[#0B3521] hover:text-white"
                   }`}
                 >
                   <span>Pilih Gelombang Ini</span>
@@ -257,13 +257,13 @@ export default function PPDBPage() {
       </section>
 
       {/* ── ALUR 5 TAHAP ───────────────────────────────────── */}
-      <section className="py-24 md:py-32 bg-white border-y border-[#1A1A2E]/5">
+      <section className="py-24 md:py-32 bg-white border-y border-[#0B3521]/5">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="text-[#CA9667] text-xs tracking-widest uppercase font-medium block mb-4">
+            <span className="text-[#0A8B46] text-xs tracking-widest uppercase font-medium block mb-4">
               Alur Pendaftaran
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#1A1A2E] tracking-tight mb-4">
+            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#0B3521] tracking-tight mb-4">
               5 Langkah Menjadi Santri
             </h2>
             <p className="text-sm text-[#2B2825]/70 font-light">
@@ -275,13 +275,13 @@ export default function PPDBPage() {
             {alurTahapan.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#FAFAF7] p-8 rounded-2xl border border-[#1A1A2E]/5 flex flex-col justify-between hover:border-[#CA9667]/30 hover:bg-white hover:shadow-xl transition-all duration-500"
+                className="bg-[#FAFAF7] p-8 rounded-2xl border border-[#0B3521]/5 flex flex-col justify-between hover:border-[#0A8B46]/30 hover:bg-white hover:shadow-xl transition-all duration-500"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-full bg-[#CA9667]/10 text-[#CA9667] font-serif font-bold text-base flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 rounded-full bg-[#0A8B46]/10 text-[#0A8B46] font-serif font-bold text-base flex items-center justify-center mb-6">
                     {item.step}
                   </div>
-                  <h3 className="font-serif text-base font-medium text-[#1A1A2E] mb-2 leading-snug">
+                  <h3 className="font-serif text-base font-medium text-[#0B3521] mb-2 leading-snug">
                     {item.title}
                   </h3>
                   <p className="text-xs text-[#2B2825]/70 leading-relaxed font-light">{item.desc}</p>
@@ -296,10 +296,10 @@ export default function PPDBPage() {
       <section className="py-24 md:py-32 bg-[#FAFAF7]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
-            <span className="text-[#CA9667] text-xs tracking-widest uppercase font-medium block mb-4">
+            <span className="text-[#0A8B46] text-xs tracking-widest uppercase font-medium block mb-4">
               Berkas Persyaratan
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#1A1A2E] tracking-tight">
+            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#0B3521] tracking-tight">
               Persiapan Dokumen Pendaftaran
             </h2>
             <p className="text-sm text-[#2B2825]/70 leading-relaxed font-light">
@@ -307,17 +307,17 @@ export default function PPDBPage() {
               ukuran maksimal 5 MB per file) sebelum mengisi formulir online.
             </p>
 
-            <div className="p-6 bg-white border border-[#1A1A2E]/5 rounded-2xl text-xs text-[#2B2825]/80 leading-relaxed flex items-start gap-4 shadow-sm">
-              <ShieldCheck className="w-5 h-5 text-[#D3AD3B] flex-shrink-0 mt-0.5" />
+            <div className="p-6 bg-white border border-[#0B3521]/5 rounded-2xl text-xs text-[#2B2825]/80 leading-relaxed flex items-start gap-4 shadow-sm">
+              <ShieldCheck className="w-5 h-5 text-[#E5A81E] flex-shrink-0 mt-0.5" />
               <span className="font-light">
-                <strong className="font-medium text-[#1A1A2E]">Keamanan Data Terjamin:</strong> Seluruh berkas identitas calon santri dan wali
+                <strong className="font-medium text-[#0B3521]">Keamanan Data Terjamin:</strong> Seluruh berkas identitas calon santri dan wali
                 disimpan secara aman dan terenkripsi untuk keperluan verifikasi panitia seleksi.
               </span>
             </div>
 
             <Link
               href="/ppdb/daftar"
-              className="inline-flex items-center gap-2 text-xs tracking-widest uppercase font-medium bg-[#D3AD3B] hover:bg-[#CA9667] text-white px-8 py-4 rounded-full transition-all duration-300 shadow-md shadow-[#D3AD3B]/20"
+              className="inline-flex items-center gap-2 text-xs tracking-widest uppercase font-medium bg-[#E5A81E] hover:bg-[#0A8B46] text-white px-8 py-4 rounded-full transition-all duration-300 shadow-md shadow-[#E5A81E]/20"
             >
               <span>Mulai Isi Formulir Online</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -326,9 +326,9 @@ export default function PPDBPage() {
 
           <div className="space-y-6">
             {syaratBerkas.map((group, idx) => (
-              <div key={idx} className="bg-white border border-[#1A1A2E]/5 rounded-3xl p-8 shadow-sm">
-                <h3 className="font-serif text-base font-medium text-[#1A1A2E] mb-4 flex items-center gap-2.5">
-                  <FileText className="w-4 h-4 text-[#CA9667]" />
+              <div key={idx} className="bg-white border border-[#0B3521]/5 rounded-3xl p-8 shadow-sm">
+                <h3 className="font-serif text-base font-medium text-[#0B3521] mb-4 flex items-center gap-2.5">
+                  <FileText className="w-4 h-4 text-[#0A8B46]" />
                   <span>{group.kategori}</span>
                 </h3>
                 <ul className="space-y-3">
@@ -337,7 +337,7 @@ export default function PPDBPage() {
                       key={itemIdx}
                       className="flex items-start gap-3 text-xs text-[#2B2825]/80 leading-relaxed font-light"
                     >
-                      <CheckCircle2 className="w-4 h-4 text-[#D3AD3B] mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-[#E5A81E] mt-0.5 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -349,13 +349,13 @@ export default function PPDBPage() {
       </section>
 
       {/* ── FAQ SECTION ───────────────────────────────────── */}
-      <section className="py-24 md:py-32 bg-white border-t border-[#1A1A2E]/5">
+      <section className="py-24 md:py-32 bg-white border-t border-[#0B3521]/5">
         <div className="max-w-4xl mx-auto px-6 md:px-12">
           <div className="text-center mb-16">
-            <span className="text-[#CA9667] text-xs tracking-widest uppercase font-medium block mb-4">
+            <span className="text-[#0A8B46] text-xs tracking-widest uppercase font-medium block mb-4">
               Tanya Jawab (FAQ)
             </span>
-            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#1A1A2E] tracking-tight mb-4">
+            <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#0B3521] tracking-tight mb-4">
               Pertanyaan Seputar PPDB
             </h2>
             <p className="text-sm text-[#2B2825]/70 font-light">
@@ -365,9 +365,9 @@ export default function PPDBPage() {
 
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="bg-[#FAFAF7] p-8 rounded-2xl border border-[#1A1A2E]/5 shadow-xs">
-                <h3 className="font-serif font-medium text-[#1A1A2E] text-base mb-2 flex items-start gap-3">
-                  <HelpCircle className="w-4 h-4 text-[#CA9667] flex-shrink-0 mt-1" />
+              <div key={idx} className="bg-[#FAFAF7] p-8 rounded-2xl border border-[#0B3521]/5 shadow-xs">
+                <h3 className="font-serif font-medium text-[#0B3521] text-base mb-2 flex items-start gap-3">
+                  <HelpCircle className="w-4 h-4 text-[#0A8B46] flex-shrink-0 mt-1" />
                   <span>{faq.q}</span>
                 </h3>
                 <p className="text-xs text-[#2B2825]/70 leading-relaxed pl-7 font-light">{faq.a}</p>

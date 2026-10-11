@@ -325,9 +325,9 @@ export default function PPDBDaftarPage() {
   const selectedPeriodObj = periods.find((p) => p.id === formData.periodId);
 
   return (
-    <div className="w-full flex flex-col items-center bg-white text-[#2B2825] font-light overflow-x-hidden selection:bg-[#D3AD3B] selection:text-white min-h-screen">
+    <div className="w-full flex flex-col items-center bg-white text-[#2B2825] font-light overflow-x-hidden selection:bg-[#E5A81E] selection:text-white min-h-screen">
       {/* ── HEADER ────────────────────────────────────────── */}
-      <header className="relative w-full min-h-[48vh] flex items-center justify-center pt-44 md:pt-52 pb-20 md:pb-28 px-6 md:px-12 bg-[#1A1A2E] text-white overflow-hidden text-center">
+      <header className="relative w-full min-h-[48vh] flex items-center justify-center pt-44 md:pt-52 pb-20 md:pb-28 px-6 md:px-12 bg-[#0B3521] text-white overflow-hidden text-center">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero-campus.jpg"
@@ -337,11 +337,11 @@ export default function PPDBDaftarPage() {
             className="w-full h-full object-cover opacity-25 mix-blend-luminosity"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A2E]/80 via-[#1A1A2E]/50 to-[#1A1A2E]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B3521]/80 via-[#0B3521]/50 to-[#0B3521]" />
         </div>
 
         <div className="relative z-10 w-full max-w-4xl mx-auto text-center flex flex-col items-center">
-          <span className="text-[#CA9667] text-xs font-medium uppercase tracking-widest mb-4 block">
+          <span className="text-[#E5A81E] text-xs font-medium uppercase tracking-widest mb-4 block">
             Pendaftaran Daring
           </span>
           <h1 className="font-serif text-4xl sm:text-6xl font-medium tracking-tight mb-6">
@@ -357,7 +357,7 @@ export default function PPDBDaftarPage() {
       <section className="w-full py-20 md:py-28 px-6 md:px-12 bg-[#FAFAF7] flex justify-center">
         <div className="w-full max-w-4xl mx-auto">
           {/* Custom Stepper */}
-          <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#1A1A2E]/5 mb-12 shadow-sm">
+          <div className="bg-white p-6 md:p-8 rounded-3xl border border-[#0B3521]/5 mb-12 shadow-sm">
             <div className="flex items-center justify-between">
               {[
                 { step: 1, label: "Program", icon: GraduationCap },
@@ -374,17 +374,17 @@ export default function PPDBDaftarPage() {
                     <div
                       className={`w-11 h-11 rounded-full flex items-center justify-center font-bold text-xs transition-all duration-300 ${
                         isDone
-                          ? "bg-[#1A1A2E] text-white"
+                          ? "bg-[#0B3521] text-white"
                           : isActive
-                          ? "bg-[#D3AD3B] text-white font-extrabold shadow-md shadow-[#D3AD3B]/30"
-                          : "bg-[#FAFAF7] text-[#2B2825]/40 border border-[#1A1A2E]/10"
+                          ? "bg-[#E5A81E] text-white font-extrabold shadow-md shadow-[#E5A81E]/30"
+                          : "bg-[#FAFAF7] text-[#2B2825]/40 border border-[#0B3521]/10"
                       }`}
                     >
                       {isDone ? <Check className="w-4 h-4 stroke-[3]" /> : <Icon className="w-4 h-4" />}
                     </div>
                     <span
                       className={`text-[10px] tracking-widest uppercase mt-2.5 font-medium hidden sm:block ${
-                        isActive ? "text-[#1A1A2E] font-bold" : isDone ? "text-[#2B2825]" : "text-[#2B2825]/40"
+                        isActive ? "text-[#0B3521] font-bold" : isDone ? "text-[#2B2825]" : "text-[#2B2825]/40"
                       }`}
                     >
                       {label}
@@ -404,10 +404,10 @@ export default function PPDBDaftarPage() {
           )}
 
           {/* Main Form Box */}
-          <div className="bg-white p-8 md:p-14 rounded-3xl border border-[#1A1A2E]/5 shadow-sm">
+          <div className="bg-white p-8 md:p-14 rounded-3xl border border-[#0B3521]/5 shadow-sm">
             {isLoadingMeta ? (
               <div className="py-20 text-center text-[#2B2825]/50 flex flex-col items-center justify-center gap-3">
-                <Loader2 className="w-8 h-8 animate-spin text-[#D3AD3B]" />
+                <Loader2 className="w-8 h-8 animate-spin text-[#E5A81E]" />
                 <span className="text-xs tracking-widest uppercase">Memuat data pendaftaran...</span>
               </div>
             ) : (
@@ -416,7 +416,7 @@ export default function PPDBDaftarPage() {
                 {currentStep === 1 && (
                   <div className="space-y-8">
                     <div>
-                      <h2 className="font-serif text-2xl font-medium text-[#1A1A2E] mb-1">
+                      <h2 className="font-serif text-2xl font-medium text-[#0B3521] mb-1">
                         Langkah 1: Pilihan Jenjang &amp; Gelombang
                       </h2>
                       <p className="text-[#2B2825]/60 text-xs font-light">
@@ -426,7 +426,7 @@ export default function PPDBDaftarPage() {
 
                     {/* Gelombang Selection */}
                     <div>
-                      <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-3 font-semibold">
+                      <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-3 font-semibold">
                         Pilih Gelombang Pendaftaran <span className="text-red-500">*</span>
                       </label>
                       <div className="grid sm:grid-cols-2 gap-4">
@@ -438,15 +438,15 @@ export default function PPDBDaftarPage() {
                               onClick={() => setFormData((prev) => ({ ...prev, periodId: p.id }))}
                               className={`p-6 rounded-2xl border-2 cursor-pointer transition-all ${
                                 isSelected
-                                  ? "border-[#D3AD3B] bg-[#D3AD3B]/5 shadow-sm"
-                                  : "border-[#1A1A2E]/10 hover:border-[#CA9667]/40 bg-white"
+                                  ? "border-[#E5A81E] bg-[#E5A81E]/5 shadow-sm"
+                                  : "border-[#0B3521]/10 hover:border-[#0A8B46]/40 bg-white"
                               }`}
                             >
                               <div className="flex items-center justify-between mb-2">
-                                <span className="font-serif font-medium text-[#1A1A2E] text-base">{p.name}</span>
+                                <span className="font-serif font-medium text-[#0B3521] text-base">{p.name}</span>
                                 <div
                                   className={`w-5 h-5 rounded-full border flex items-center justify-center ${
-                                    isSelected ? "border-[#D3AD3B] bg-[#D3AD3B]" : "border-[#1A1A2E]/20"
+                                    isSelected ? "border-[#E5A81E] bg-[#E5A81E]" : "border-[#0B3521]/20"
                                   }`}
                                 >
                                   {isSelected && <div className="w-2 h-2 bg-white rounded-full" />}
@@ -461,7 +461,7 @@ export default function PPDBDaftarPage() {
 
                     {/* Program Selection */}
                     <div>
-                      <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-3 font-semibold">
+                      <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-3 font-semibold">
                         Pilih Program Pendidikan <span className="text-red-500">*</span>
                       </label>
                       <div className="space-y-4">
@@ -473,23 +473,23 @@ export default function PPDBDaftarPage() {
                               onClick={() => setFormData((prev) => ({ ...prev, programId: prog.id }))}
                               className={`p-6 rounded-2xl border-2 cursor-pointer transition-all flex items-start gap-4 ${
                                 isSelected
-                                  ? "border-[#D3AD3B] bg-[#D3AD3B]/5 shadow-sm"
-                                  : "border-[#1A1A2E]/10 hover:border-[#CA9667]/40 bg-white"
+                                  ? "border-[#E5A81E] bg-[#E5A81E]/5 shadow-sm"
+                                  : "border-[#0B3521]/10 hover:border-[#0A8B46]/40 bg-white"
                               }`}
                             >
                               <div
                                 className={`w-5 h-5 rounded-full border mt-1 flex items-center justify-center flex-shrink-0 ${
-                                  isSelected ? "border-[#D3AD3B] bg-[#D3AD3B]" : "border-[#1A1A2E]/20"
+                                  isSelected ? "border-[#E5A81E] bg-[#E5A81E]" : "border-[#0B3521]/20"
                                 }`}
                               >
                                 {isSelected && <div className="w-2 h-2 bg-white rounded-full" />}
                               </div>
                               <div className="flex-1">
                                 <div className="flex items-center gap-2 mb-1">
-                                  <span className="text-[10px] font-semibold tracking-widest uppercase px-3 py-0.5 rounded-full bg-[#CA9667]/10 text-[#CA9667]">
+                                  <span className="text-[10px] font-semibold tracking-widest uppercase px-3 py-0.5 rounded-full bg-[#0A8B46]/10 text-[#0A8B46]">
                                     {prog.level}
                                   </span>
-                                  <h3 className="font-serif text-base font-medium text-[#1A1A2E]">{prog.name}</h3>
+                                  <h3 className="font-serif text-base font-medium text-[#0B3521]">{prog.name}</h3>
                                 </div>
                                 <p className="text-xs text-[#2B2825]/70 leading-relaxed font-light">{prog.description}</p>
                               </div>
@@ -505,7 +505,7 @@ export default function PPDBDaftarPage() {
                 {currentStep === 2 && (
                   <div className="space-y-6">
                     <div>
-                      <h2 className="font-serif text-2xl font-medium text-[#1A1A2E] mb-1">
+                      <h2 className="font-serif text-2xl font-medium text-[#0B3521] mb-1">
                         Langkah 2: Data Diri Calon Santri
                       </h2>
                       <p className="text-[#2B2825]/60 text-xs font-light">
@@ -515,7 +515,7 @@ export default function PPDBDaftarPage() {
 
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div className="sm:col-span-2">
-                        <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                        <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                           Nama Lengkap Calon Santri <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -530,7 +530,7 @@ export default function PPDBDaftarPage() {
                       </div>
 
                       <div className="custom-select-wrapper">
-                        <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                        <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                           Jenis Kelamin <span className="text-red-500">*</span>
                         </label>
                         <select
@@ -545,7 +545,7 @@ export default function PPDBDaftarPage() {
                       </div>
 
                       <div>
-                        <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                        <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                           Nomor Induk Kependudukan (NIK)
                         </label>
                         <input
@@ -560,7 +560,7 @@ export default function PPDBDaftarPage() {
                       </div>
 
                       <div>
-                        <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                        <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                           Tempat Lahir <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -568,14 +568,14 @@ export default function PPDBDaftarPage() {
                           name="birthPlace"
                           value={formData.birthPlace}
                           onChange={handleChange}
-                          placeholder="Contoh: Bogor"
+                          placeholder="Contoh: Bandung"
                           className="input-editorial"
                           required
                         />
                       </div>
 
                       <div>
-                        <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                        <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                           Tanggal Lahir <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -589,7 +589,7 @@ export default function PPDBDaftarPage() {
                       </div>
 
                       <div>
-                        <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                        <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                           Nomor Induk Siswa Nasional (NISN)
                         </label>
                         <input
@@ -603,7 +603,7 @@ export default function PPDBDaftarPage() {
                       </div>
 
                       <div>
-                        <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                        <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                           Nomor HP / WhatsApp Santri
                         </label>
                         <input
@@ -611,13 +611,13 @@ export default function PPDBDaftarPage() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleChange}
-                          placeholder="081234567890"
+                          placeholder="085196045409"
                           className="input-editorial"
                         />
                       </div>
 
                       <div className="sm:col-span-2">
-                        <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                        <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                           Asal Sekolah Sebelumnya <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -625,14 +625,14 @@ export default function PPDBDaftarPage() {
                           name="previousSchool"
                           value={formData.previousSchool}
                           onChange={handleChange}
-                          placeholder="Contoh: SDIT Al-Ihsan Bogor / MTs Negeri 1 Jakarta"
+                          placeholder="Contoh: SDIT Al-Ihsan Bandung / MTs Negeri 1 Bandung"
                           className="input-editorial"
                           required
                         />
                       </div>
 
                       <div className="sm:col-span-2">
-                        <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                        <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                           Alamat Lengkap Domisili <span className="text-red-500">*</span>
                         </label>
                         <textarea
@@ -653,7 +653,7 @@ export default function PPDBDaftarPage() {
                 {currentStep === 3 && (
                   <div className="space-y-8">
                     <div>
-                      <h2 className="font-serif text-2xl font-medium text-[#1A1A2E] mb-1">
+                      <h2 className="font-serif text-2xl font-medium text-[#0B3521] mb-1">
                         Langkah 3: Data Orang Tua / Wali
                       </h2>
                       <p className="text-[#2B2825]/60 text-xs font-light">
@@ -662,14 +662,14 @@ export default function PPDBDaftarPage() {
                     </div>
 
                     {/* Data Ayah */}
-                    <div className="p-8 bg-[#FAFAF7] rounded-2xl border border-[#1A1A2E]/5 space-y-4">
-                      <h3 className="font-serif text-base font-medium text-[#1A1A2E] flex items-center gap-2">
-                        <User className="w-4 h-4 text-[#CA9667]" />
+                    <div className="p-8 bg-[#FAFAF7] rounded-2xl border border-[#0B3521]/5 space-y-4">
+                      <h3 className="font-serif text-base font-medium text-[#0B3521] flex items-center gap-2">
+                        <User className="w-4 h-4 text-[#0A8B46]" />
                         Data Ayah Kandung
                       </h3>
                       <div className="grid sm:grid-cols-2 gap-6">
                         <div>
-                          <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                          <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                             Nama Lengkap Ayah
                           </label>
                           <input
@@ -682,7 +682,7 @@ export default function PPDBDaftarPage() {
                           />
                         </div>
                         <div>
-                          <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                          <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                             Nomor WhatsApp Ayah
                           </label>
                           <input
@@ -690,12 +690,12 @@ export default function PPDBDaftarPage() {
                             name="fatherPhone"
                             value={formData.fatherPhone}
                             onChange={handleChange}
-                            placeholder="081234567890"
+                            placeholder="085196045409"
                             className="input-editorial"
                           />
                         </div>
                         <div>
-                          <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                          <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                             Pekerjaan Ayah
                           </label>
                           <input
@@ -708,7 +708,7 @@ export default function PPDBDaftarPage() {
                           />
                         </div>
                         <div className="custom-select-wrapper">
-                          <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                          <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                             Penghasilan Bulanan
                           </label>
                           <select
@@ -728,14 +728,14 @@ export default function PPDBDaftarPage() {
                     </div>
 
                     {/* Data Ibu */}
-                    <div className="p-8 bg-[#FAFAF7] rounded-2xl border border-[#1A1A2E]/5 space-y-4">
-                      <h3 className="font-serif text-base font-medium text-[#1A1A2E] flex items-center gap-2">
-                        <User className="w-4 h-4 text-[#CA9667]" />
+                    <div className="p-8 bg-[#FAFAF7] rounded-2xl border border-[#0B3521]/5 space-y-4">
+                      <h3 className="font-serif text-base font-medium text-[#0B3521] flex items-center gap-2">
+                        <User className="w-4 h-4 text-[#0A8B46]" />
                         Data Ibu Kandung
                       </h3>
                       <div className="grid sm:grid-cols-2 gap-6">
                         <div>
-                          <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                          <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                             Nama Lengkap Ibu
                           </label>
                           <input
@@ -748,7 +748,7 @@ export default function PPDBDaftarPage() {
                           />
                         </div>
                         <div>
-                          <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                          <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                             Nomor WhatsApp Ibu
                           </label>
                           <input
@@ -756,12 +756,12 @@ export default function PPDBDaftarPage() {
                             name="motherPhone"
                             value={formData.motherPhone}
                             onChange={handleChange}
-                            placeholder="081234567890"
+                            placeholder="085196045409"
                             className="input-editorial"
                           />
                         </div>
                         <div>
-                          <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                          <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                             Pekerjaan Ibu
                           </label>
                           <input
@@ -774,7 +774,7 @@ export default function PPDBDaftarPage() {
                           />
                         </div>
                         <div className="custom-select-wrapper">
-                          <label className="block text-[10px] tracking-widest uppercase text-[#CA9667] mb-2 font-semibold">
+                          <label className="block text-[10px] tracking-widest uppercase text-[#0A8B46] mb-2 font-semibold">
                             Penghasilan Bulanan
                           </label>
                           <select
@@ -799,7 +799,7 @@ export default function PPDBDaftarPage() {
                 {currentStep === 4 && (
                   <div className="space-y-6">
                     <div>
-                      <h2 className="font-serif text-2xl font-medium text-[#1A1A2E] mb-1">
+                      <h2 className="font-serif text-2xl font-medium text-[#0B3521] mb-1">
                         Langkah 4: Upload Berkas Dokumen
                       </h2>
                       <p className="text-[#2B2825]/60 text-xs font-light">
@@ -811,23 +811,23 @@ export default function PPDBDaftarPage() {
                       {docs.map((doc, idx) => (
                         <div
                           key={doc.type}
-                          className="p-6 rounded-2xl border border-[#1A1A2E]/5 bg-[#FAFAF7] flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+                          className="p-6 rounded-2xl border border-[#0B3521]/5 bg-[#FAFAF7] flex flex-col sm:flex-row sm:items-center justify-between gap-4"
                         >
                           <div>
                             <div className="flex items-center gap-2">
-                              <span className="font-serif text-base font-medium text-[#1A1A2E]">{doc.label}</span>
+                              <span className="font-serif text-base font-medium text-[#0B3521]">{doc.label}</span>
                               {doc.required ? (
-                                <span className="text-[10px] font-semibold tracking-widest uppercase px-2.5 py-0.5 rounded-full bg-[#D3AD3B]/10 text-[#D3AD3B]">
+                                <span className="text-[10px] font-semibold tracking-widest uppercase px-2.5 py-0.5 rounded-full bg-[#E5A81E]/10 text-[#E5A81E]">
                                   Wajib
                                 </span>
                               ) : (
-                                <span className="text-[10px] font-medium tracking-widest uppercase px-2.5 py-0.5 rounded-full bg-[#1A1A2E]/5 text-[#2B2825]/60">
+                                <span className="text-[10px] font-medium tracking-widest uppercase px-2.5 py-0.5 rounded-full bg-[#0B3521]/5 text-[#2B2825]/60">
                                   Opsional
                                 </span>
                               )}
                             </div>
                             {doc.fileName && (
-                              <p className="text-xs text-[#D3AD3B] mt-1 flex items-center gap-1.5 font-medium">
+                              <p className="text-xs text-[#E5A81E] mt-1 flex items-center gap-1.5 font-medium">
                                 <Check className="w-3.5 h-3.5 stroke-[3]" />
                                 Terunggah: {doc.fileName}
                               </p>
@@ -842,7 +842,7 @@ export default function PPDBDaftarPage() {
 
                           <div className="flex items-center gap-2">
                             {doc.isUploading ? (
-                              <div className="flex items-center gap-2 text-xs text-[#D3AD3B] px-4 py-2 bg-[#D3AD3B]/10 rounded-full">
+                              <div className="flex items-center gap-2 text-xs text-[#E5A81E] px-4 py-2 bg-[#E5A81E]/10 rounded-full">
                                 <Loader2 className="w-4 h-4 animate-spin" />
                                 Mengunggah...
                               </div>
@@ -856,7 +856,7 @@ export default function PPDBDaftarPage() {
                                 Ganti File
                               </button>
                             ) : (
-                              <label className="cursor-pointer px-6 py-2.5 text-xs tracking-widest uppercase font-medium text-[#1A1A2E] bg-white hover:bg-[#1A1A2E] hover:text-white border border-[#1A1A2E]/20 rounded-full shadow-sm flex items-center gap-2 transition-all">
+                              <label className="cursor-pointer px-6 py-2.5 text-xs tracking-widest uppercase font-medium text-[#0B3521] bg-white hover:bg-[#0B3521] hover:text-white border border-[#0B3521]/20 rounded-full shadow-sm flex items-center gap-2 transition-all">
                                 <Upload className="w-3.5 h-3.5" />
                                 Pilih File
                                 <input
@@ -882,7 +882,7 @@ export default function PPDBDaftarPage() {
                 {currentStep === 5 && (
                   <div className="space-y-6">
                     <div>
-                      <h2 className="font-serif text-2xl font-medium text-[#1A1A2E] mb-1">
+                      <h2 className="font-serif text-2xl font-medium text-[#0B3521] mb-1">
                         Langkah 5: Konfirmasi &amp; Pengiriman Formulir
                       </h2>
                       <p className="text-[#2B2825]/60 text-xs font-light">
@@ -892,66 +892,66 @@ export default function PPDBDaftarPage() {
 
                     <div className="space-y-4">
                       {/* Pilihan */}
-                      <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#1A1A2E]/5 text-xs space-y-2">
-                        <div className="font-serif font-medium text-[#1A1A2E] text-base border-b border-[#1A1A2E]/10 pb-2 mb-3">
+                      <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#0B3521]/5 text-xs space-y-2">
+                        <div className="font-serif font-medium text-[#0B3521] text-base border-b border-[#0B3521]/10 pb-2 mb-3">
                           Pilihan Pendaftaran
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                           <div>
-                            <span className="text-[#CA9667] block uppercase tracking-widest text-[10px] font-semibold mb-0.5">Gelombang:</span>
-                            <span className="font-medium text-[#1A1A2E] text-sm">{selectedPeriodObj?.name}</span>
+                            <span className="text-[#0A8B46] block uppercase tracking-widest text-[10px] font-semibold mb-0.5">Gelombang:</span>
+                            <span className="font-medium text-[#0B3521] text-sm">{selectedPeriodObj?.name}</span>
                           </div>
                           <div>
-                            <span className="text-[#CA9667] block uppercase tracking-widest text-[10px] font-semibold mb-0.5">Program:</span>
-                            <span className="font-medium text-[#1A1A2E] text-sm">{selectedProgramObj?.name}</span>
+                            <span className="text-[#0A8B46] block uppercase tracking-widest text-[10px] font-semibold mb-0.5">Program:</span>
+                            <span className="font-medium text-[#0B3521] text-sm">{selectedProgramObj?.name}</span>
                           </div>
                         </div>
                       </div>
 
                       {/* Identitas Santri */}
-                      <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#1A1A2E]/5 text-xs space-y-2">
-                        <div className="font-serif font-medium text-[#1A1A2E] text-base border-b border-[#1A1A2E]/10 pb-2 mb-3">
+                      <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#0B3521]/5 text-xs space-y-2">
+                        <div className="font-serif font-medium text-[#0B3521] text-base border-b border-[#0B3521]/10 pb-2 mb-3">
                           Identitas Calon Santri
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                           <div>
-                            <span className="text-[#CA9667] block uppercase tracking-widest text-[10px] font-semibold mb-0.5">Nama Lengkap:</span>
-                            <span className="font-medium text-[#1A1A2E] text-sm">{formData.fullName}</span>
+                            <span className="text-[#0A8B46] block uppercase tracking-widest text-[10px] font-semibold mb-0.5">Nama Lengkap:</span>
+                            <span className="font-medium text-[#0B3521] text-sm">{formData.fullName}</span>
                           </div>
                           <div>
-                            <span className="text-[#CA9667] block uppercase tracking-widest text-[10px] font-semibold mb-0.5">Jenis Kelamin:</span>
-                            <span className="font-medium text-[#1A1A2E] text-sm">
+                            <span className="text-[#0A8B46] block uppercase tracking-widest text-[10px] font-semibold mb-0.5">Jenis Kelamin:</span>
+                            <span className="font-medium text-[#0B3521] text-sm">
                               {formData.gender === "LAKI_LAKI" ? "Laki-laki" : "Perempuan"}
                             </span>
                           </div>
                           <div>
-                            <span className="text-[#CA9667] block uppercase tracking-widest text-[10px] font-semibold mb-0.5">Tempat, Tanggal Lahir:</span>
-                            <span className="font-medium text-[#1A1A2E] text-sm">
+                            <span className="text-[#0A8B46] block uppercase tracking-widest text-[10px] font-semibold mb-0.5">Tempat, Tanggal Lahir:</span>
+                            <span className="font-medium text-[#0B3521] text-sm">
                               {formData.birthPlace}, {formData.birthDate}
                             </span>
                           </div>
                           <div>
-                            <span className="text-[#CA9667] block uppercase tracking-widest text-[10px] font-semibold mb-0.5">Asal Sekolah:</span>
-                            <span className="font-medium text-[#1A1A2E] text-sm">{formData.previousSchool}</span>
+                            <span className="text-[#0A8B46] block uppercase tracking-widest text-[10px] font-semibold mb-0.5">Asal Sekolah:</span>
+                            <span className="font-medium text-[#0B3521] text-sm">{formData.previousSchool}</span>
                           </div>
                           <div className="col-span-2">
-                            <span className="text-[#CA9667] block uppercase tracking-widest text-[10px] font-semibold mb-0.5">Alamat Domisili:</span>
-                            <span className="font-medium text-[#1A1A2E] text-sm">{formData.address}</span>
+                            <span className="text-[#0A8B46] block uppercase tracking-widest text-[10px] font-semibold mb-0.5">Alamat Domisili:</span>
+                            <span className="font-medium text-[#0B3521] text-sm">{formData.address}</span>
                           </div>
                         </div>
                       </div>
 
                       {/* Berkas */}
-                      <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#1A1A2E]/5 text-xs">
-                        <div className="font-serif font-medium text-[#1A1A2E] text-base border-b border-[#1A1A2E]/10 pb-2 mb-3">
+                      <div className="p-6 rounded-2xl bg-[#FAFAF7] border border-[#0B3521]/5 text-xs">
+                        <div className="font-serif font-medium text-[#0B3521] text-base border-b border-[#0B3521]/10 pb-2 mb-3">
                           Berkas Terlampir
                         </div>
                         <ul className="space-y-2">
                           {docs
                             .filter((d) => d.fileUrl)
                             .map((d) => (
-                              <li key={d.type} className="flex items-center gap-2 text-[#1A1A2E] text-xs font-medium">
-                                <CheckCircle2 className="w-4 h-4 text-[#D3AD3B]" />
+                              <li key={d.type} className="flex items-center gap-2 text-[#0B3521] text-xs font-medium">
+                                <CheckCircle2 className="w-4 h-4 text-[#E5A81E]" />
                                 <span>
                                   {d.label}: <strong>{d.fileName}</strong>
                                 </span>
@@ -962,19 +962,19 @@ export default function PPDBDaftarPage() {
                     </div>
 
                     {/* Persetujuan */}
-                    <div className="p-6 rounded-2xl bg-[#D3AD3B]/10 border border-[#D3AD3B]/30">
+                    <div className="p-6 rounded-2xl bg-[#E5A81E]/10 border border-[#E5A81E]/30">
                       <label className="flex items-start gap-3 cursor-pointer">
                         <input
                           type="checkbox"
                           name="agreed"
                           checked={formData.agreed}
                           onChange={(e) => setFormData((prev) => ({ ...prev, agreed: e.target.checked }))}
-                          className="w-4 h-4 text-[#D3AD3B] focus:ring-[#D3AD3B] rounded mt-0.5"
+                          className="w-4 h-4 text-[#E5A81E] focus:ring-[#E5A81E] rounded mt-0.5"
                         />
                         <span className="text-xs text-[#2B2825]/90 leading-relaxed font-light">
                           Saya menyatakan dengan sebenarnya bahwa seluruh data dan dokumen yang saya unggah
                           adalah benar, sah, dan dapat dipertanggungjawabkan. Saya bersedia mengikuti seluruh
-                          tahapan seleksi dan mematuhi tata tertib Pondok Pesantren Modern Darul Ulum.
+                          tahapan seleksi dan mematuhi tata tertib Pondok Pesantren Baitul Hidayah.
                         </span>
                       </label>
                     </div>
@@ -982,19 +982,19 @@ export default function PPDBDaftarPage() {
                 )}
 
                 {/* Navigation Buttons */}
-                <div className="mt-12 pt-8 border-t border-[#1A1A2E]/10 flex items-center justify-between">
+                <div className="mt-12 pt-8 border-t border-[#0B3521]/10 flex items-center justify-between">
                   {currentStep > 1 ? (
                     <button
                       type="button"
                       onClick={handlePrev}
                       disabled={isSubmitting}
-                      className="text-xs tracking-widest uppercase font-medium bg-white text-[#1A1A2E] border border-[#1A1A2E]/20 px-6 py-3.5 rounded-full hover:bg-[#1A1A2E] hover:text-white transition-all inline-flex items-center gap-2 cursor-pointer"
+                      className="text-xs tracking-widest uppercase font-medium bg-white text-[#0B3521] border border-[#0B3521]/20 px-6 py-3.5 rounded-full hover:bg-[#0B3521] hover:text-white transition-all inline-flex items-center gap-2 cursor-pointer"
                     >
                       <ArrowLeft className="w-3.5 h-3.5" />
                       Sebelumnya
                     </button>
                   ) : (
-                    <Link href="/ppdb" className="text-xs text-[#2B2825]/60 hover:text-[#1A1A2E] font-medium tracking-wider uppercase">
+                    <Link href="/ppdb" className="text-xs text-[#2B2825]/60 hover:text-[#0B3521] font-medium tracking-wider uppercase">
                       &larr; Info PPDB
                     </Link>
                   )}
@@ -1003,7 +1003,7 @@ export default function PPDBDaftarPage() {
                     <button
                       type="button"
                       onClick={handleNext}
-                      className="text-xs tracking-widest uppercase font-medium bg-[#D3AD3B] hover:bg-[#CA9667] text-white px-8 py-3.5 rounded-full transition-all shadow-md shadow-[#D3AD3B]/20 inline-flex items-center gap-2 cursor-pointer"
+                      className="text-xs tracking-widest uppercase font-medium bg-[#E5A81E] hover:bg-[#0A8B46] text-white px-8 py-3.5 rounded-full transition-all shadow-md shadow-[#E5A81E]/20 inline-flex items-center gap-2 cursor-pointer"
                     >
                       Lanjutkan
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -1012,7 +1012,7 @@ export default function PPDBDaftarPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting || !formData.agreed}
-                      className="text-xs tracking-widest uppercase font-medium bg-[#D3AD3B] hover:bg-[#CA9667] text-white px-10 py-3.5 rounded-full transition-all shadow-md shadow-[#D3AD3B]/20 inline-flex items-center gap-2 disabled:opacity-50 cursor-pointer"
+                      className="text-xs tracking-widest uppercase font-medium bg-[#E5A81E] hover:bg-[#0A8B46] text-white px-10 py-3.5 rounded-full transition-all shadow-md shadow-[#E5A81E]/20 inline-flex items-center gap-2 disabled:opacity-50 cursor-pointer"
                     >
                       {isSubmitting ? (
                         <>

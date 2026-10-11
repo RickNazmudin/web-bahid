@@ -167,12 +167,12 @@ async function main() {
 
   // 6. Seed Pengaturan Web (Settings)
   const settingsData = [
-    { key: "site_name", value: "Pondok Pesantren Modern Darul Ulum", group: "general", description: "Nama resmi pesantren" },
+    { key: "site_name", value: "Pondok Pesantren Baitul Hidayah", group: "general", description: "Nama resmi pesantren" },
     { key: "site_tagline", value: "Mencetak Generasi Qur'ani, Berakhlak Mulia, dan Unggul dalam Sains", group: "general", description: "Slogan / Motto pesantren" },
-    { key: "site_address", value: "Jl. Pesantren Luhur No. 99, Cisarua, Bogor, Jawa Barat 16750", group: "contact", description: "Alamat lengkap" },
-    { key: "site_phone", value: "+62 251 8888 999", group: "contact", description: "Nomor telepon kantor" },
-    { key: "site_whatsapp", value: "6281234567890", group: "contact", description: "Nomor WhatsApp Helpdesk PPDB" },
-    { key: "site_email", value: "info@darululum-bogor.sch.id", group: "contact", description: "Email resmi pesantren" },
+    { key: "site_address", value: "Jl. Ciporeat Andir kulon, Kelurahan Pasanggrahan, Kec. Ujungberung, Kota Bandung", group: "contact", description: "Alamat lengkap" },
+    { key: "site_phone", value: "085196045409", group: "contact", description: "Nomor telepon kantor" },
+    { key: "site_whatsapp", value: "085196045409", group: "contact", description: "Nomor WhatsApp Helpdesk PPDB" },
+    { key: "site_email", value: "info@baitulhidayah.sch.id", group: "contact", description: "Email resmi pesantren" },
     { key: "site_vision", value: "Menjadi pusat keunggulan pendidikan Islam integratif berlandaskan Al-Qur'an dan As-Sunnah yang berwawasan global.", group: "general", description: "Visi Pesantren" },
     { key: "site_mission", value: "1. Menyelenggarakan pendidikan tahfidz dan kepesantrenan berkualitas tinggi.\n2. Mengintegrasikan kurikulum ilmu agama dan sains teknologi modern.\n3. Membina akhlak karimah, kemandirian, dan jiwa kepemimpinan santri.", group: "general", description: "Misi Pesantren" },
   ];

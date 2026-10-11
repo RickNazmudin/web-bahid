@@ -51,7 +51,7 @@ const fasilitasData = [
     ],
   },
   {
-    name: "Perpustakaan & e-Library Darul Ulum",
+    name: "Perpustakaan & e-Library Baitul Hidayah",
     category: "Perpustakaan & Olahraga",
     tag: "Khazanah 8.000+ Judul",
     image: "/images/facility-library.jpg",
@@ -68,7 +68,7 @@ const fasilitasData = [
     category: "Ibadah & Halaqah",
     tag: "Kawasan Pegunungan Asri",
     image: "/images/hero-campus.jpg",
-    desc: "Kawasan pesantren seluas 10 hektar di perbukitan Cisarua Bogor dengan taman asri, gazebo belajar luar ruangan, dan udara pegunungan yang bersih.",
+    desc: "Kawasan pesantren seluas 10 hektar di perbukitan Ujungberung, Kota Bandung dengan taman asri, gazebo belajar luar ruangan, dan udara pegunungan yang bersih.",
     specs: [
       "Lingkungan bebas polusi dan sejuk",
       "Gazebo belajar tahfidz outdoor",
@@ -100,9 +100,9 @@ export default function FasilitasPage() {
       : fasilitasData.filter((f) => f.category === activeCategory);
 
   return (
-    <div className="w-full flex flex-col items-center bg-white text-[#2B2825] font-light overflow-x-hidden selection:bg-[#D3AD3B] selection:text-white">
+    <div className="w-full flex flex-col items-center bg-white text-[#2B2825] font-light overflow-x-hidden selection:bg-[#E5A81E] selection:text-white">
       {/* ── HEADER ────────────────────────────────────────── */}
-      <header className="relative w-full min-h-[48vh] flex items-center justify-center pt-44 md:pt-52 pb-20 md:pb-28 px-6 md:px-12 bg-[#1A1A2E] text-white overflow-hidden text-center">
+      <header className="relative w-full min-h-[48vh] flex items-center justify-center pt-44 md:pt-52 pb-20 md:pb-28 px-6 md:px-12 bg-[#0B3521] text-white overflow-hidden text-center">
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero-campus.jpg"
@@ -112,19 +112,19 @@ export default function FasilitasPage() {
             className="w-full h-full object-cover opacity-25 mix-blend-luminosity"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A2E]/80 via-[#1A1A2E]/50 to-[#1A1A2E]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B3521]/80 via-[#0B3521]/50 to-[#0B3521]" />
         </div>
 
         <div className="relative z-10 w-full max-w-4xl mx-auto text-center flex flex-col items-center">
-          <span className="text-[#CA9667] text-xs font-medium uppercase tracking-widest mb-4 block">
+          <span className="text-[#E5A81E] text-xs font-medium uppercase tracking-widest mb-4 block">
             Sarana &amp; Prasarana
           </span>
           <h1 className="font-serif text-4xl sm:text-6xl font-medium tracking-tight mb-6">
             Fasilitas Kampus Representatif
           </h1>
           <p className="text-[#FAFAF7]/80 max-w-2xl mx-auto font-light text-base md:text-lg leading-relaxed">
-            Sarana belajar terpadu, asrama ergonomis, dan masjid megah di tengah alam asri perbukitan
-            Bogor untuk mendukung kenyamanan dan tumbuh kembang santri.
+            Sarana belajar terpadu, asrama ergonomis, dan masjid megah di tengah alam asri Ujungberung,
+            Kota Bandung untuk mendukung kenyamanan dan tumbuh kembang santri.
           </p>
         </div>
       </header>
@@ -142,8 +142,8 @@ export default function FasilitasPage() {
                   onClick={() => setActiveCategory(cat)}
                   className={`px-6 py-3 text-xs tracking-widest uppercase font-medium rounded-full transition-all duration-300 cursor-pointer whitespace-nowrap ${
                     isActive
-                      ? "bg-[#1A1A2E] text-white shadow-md"
-                      : "bg-white text-[#2B2825]/70 hover:bg-[#1A1A2E]/5 border border-[#1A1A2E]/5"
+                      ? "bg-[#0B3521] text-white shadow-md"
+                      : "bg-white text-[#2B2825]/70 hover:bg-[#0B3521]/5 border border-[#0B3521]/5"
                   }`}
                 >
                   {cat}
@@ -157,7 +157,7 @@ export default function FasilitasPage() {
             {filtered.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-3xl border border-[#1A1A2E]/5 shadow-sm overflow-hidden flex flex-col justify-between group hover:border-[#CA9667]/30 hover:shadow-xl transition-all duration-500"
+                className="bg-white rounded-3xl border border-[#0B3521]/5 shadow-sm overflow-hidden flex flex-col justify-between group hover:border-[#0A8B46]/30 hover:shadow-xl transition-all duration-500"
               >
                 <div>
                   {/* Photo Header */}
@@ -169,14 +169,14 @@ export default function FasilitasPage() {
                       className="object-cover transition-transform duration-700 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 33vw"
                     />
-                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3.5 py-1 rounded-full text-[10px] tracking-widest uppercase font-medium text-[#1A1A2E] shadow-sm">
+                    <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3.5 py-1 rounded-full text-[10px] tracking-widest uppercase font-medium text-[#0B3521] shadow-sm">
                       {item.tag}
                     </div>
                   </div>
 
                   {/* Body Content */}
                   <div className="p-8 space-y-4">
-                    <h3 className="font-serif text-xl font-medium text-[#1A1A2E] leading-snug">
+                    <h3 className="font-serif text-xl font-medium text-[#0B3521] leading-snug">
                       {item.name}
                     </h3>
 
@@ -184,10 +184,10 @@ export default function FasilitasPage() {
                       {item.desc}
                     </p>
 
-                    <div className="space-y-3 pt-5 border-t border-[#1A1A2E]/5">
+                    <div className="space-y-3 pt-5 border-t border-[#0B3521]/5">
                       {item.specs.map((spec, sIdx) => (
                         <div key={sIdx} className="flex items-start gap-2.5 text-xs text-[#2B2825]/80 leading-relaxed font-light">
-                          <CheckCircle2 className="w-4 h-4 text-[#D3AD3B] flex-shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-4 h-4 text-[#E5A81E] flex-shrink-0 mt-0.5" />
                           <span>{spec}</span>
                         </div>
                       ))}
@@ -201,28 +201,28 @@ export default function FasilitasPage() {
       </section>
 
       {/* ── CTA VISIT CAMPUS ──────────────────────────────── */}
-      <section className="py-24 md:py-32 bg-white text-center border-t border-[#1A1A2E]/5">
+      <section className="py-24 md:py-32 bg-white text-center border-t border-[#0B3521]/5">
         <div className="max-w-3xl mx-auto px-6">
-          <span className="text-[#CA9667] text-xs tracking-widest uppercase font-medium block mb-4">
+          <span className="text-[#0A8B46] text-xs tracking-widest uppercase font-medium block mb-4">
             Kunjungan Kampus
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#1A1A2E] tracking-tight mb-6">
+          <h2 className="font-serif text-3xl md:text-4xl font-medium text-[#0B3521] tracking-tight mb-6">
             Ingin Melihat Langsung Fasilitas Kampus?
           </h2>
           <p className="text-base text-[#2B2825]/70 leading-relaxed mb-10 max-w-xl mx-auto font-light">
-            Kami mengundang calon wali santri untuk berkunjung ke kampus Pesantren Modern Darul Ulum,
+            Kami mengundang calon wali santri untuk berkunjung ke kampus Pesantren Baitul Hidayah,
             melihat sarana asrama, dan berkonsultasi langsung dengan dewan pengasuh.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/kontak"
-              className="inline-flex items-center justify-center text-xs tracking-widest uppercase font-medium bg-[#D3AD3B] text-white px-8 py-4 rounded-full hover:bg-[#CA9667] transition-all duration-300 shadow-md shadow-[#D3AD3B]/20"
+              className="inline-flex items-center justify-center text-xs tracking-widest uppercase font-medium bg-[#E5A81E] text-white px-8 py-4 rounded-full hover:bg-[#0A8B46] transition-all duration-300 shadow-md shadow-[#E5A81E]/20"
             >
               Jadwalkan Kunjungan
             </Link>
             <Link
               href="/ppdb/daftar"
-              className="inline-flex items-center justify-center text-xs tracking-widest uppercase font-medium bg-transparent text-[#1A1A2E] border border-[#1A1A2E]/20 px-8 py-4 rounded-full hover:bg-[#1A1A2E] hover:text-white transition-all duration-300"
+              className="inline-flex items-center justify-center text-xs tracking-widest uppercase font-medium bg-transparent text-[#0B3521] border border-[#0B3521]/20 px-8 py-4 rounded-full hover:bg-[#0B3521] hover:text-white transition-all duration-300"
             >
               Daftar Santri Baru 2026
             </Link>

@@ -19,22 +19,28 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "Pondok Pesantren Modern Darul Ulum — Membina Generasi Qur'ani",
-    template: "%s | Pesantren Darul Ulum",
+    default: "Pondok Pesantren Baitul Hidayah — Membina Generasi Qur'ani",
+    template: "%s | Baitul Hidayah",
   },
   description:
-    "Pondok Pesantren Modern Darul Ulum Bogor memadukan tahfidz Al-Qur'an bersanad, keunggulan sains riset modern, dan tradisi kitab kuning di kawasan sejuk perbukitan Bogor.",
+    "Pondok Pesantren Baitul Hidayah Bandung memadukan tahfidz Al-Qur'an, kedalaman ilmu agama, dan sains di Jl. Ciporeat Andir kulon, Pasanggrahan, Ujungberung, Kota Bandung.",
   keywords: [
-    "pesantren modern bogor",
+    "pesantren baitul hidayah",
+    "pondok pesantren bandung",
+    "baitul hidayah ujungberung",
     "PPDB online 2026",
-    "tahfidz bersanad",
-    "madrasah aliyah sains",
-    "madrasah tsanawiyah unggulan",
+    "tahfidz al-qur'an bandung",
+    "pendidikan pesantren baitul hidayah",
   ],
+  icons: {
+    icon: "/images/logo.png",
+    shortcut: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    siteName: "Pesantren Darul Ulum",
+    siteName: "Pesantren Baitul Hidayah",
   },
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"
@@ -55,7 +61,7 @@ export default function RootLayout({
     >
       <body
         suppressHydrationWarning
-        className="bg-white text-[#2B2825] antialiased min-h-screen flex flex-col selection:bg-[#D3AD3B] selection:text-white font-sans"
+        className="bg-white text-[#1A281E] antialiased min-h-screen flex flex-col selection:bg-[#0A8B46] selection:text-white font-sans"
       >
         {children}
       </body>

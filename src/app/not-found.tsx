@@ -3,12 +3,12 @@ import { ArrowLeft, Compass } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-[#1A1A2E] text-white p-6 text-center font-sans relative overflow-hidden">
-      <div className="w-20 h-20 rounded-3xl bg-[#D3AD3B]/10 text-[#D3AD3B] border border-[#D3AD3B]/30 flex items-center justify-center mx-auto mb-6 shadow-xl shadow-[#D3AD3B]/10">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-[#0B3521] text-white p-6 text-center font-sans relative overflow-hidden">
+      <div className="w-20 h-20 rounded-3xl bg-[#E5A81E]/10 text-[#E5A81E] border border-[#E5A81E]/30 flex items-center justify-center mx-auto mb-6 shadow-xl shadow-[#E5A81E]/10">
         <Compass className="w-10 h-10" />
       </div>
 
-      <span className="text-xs uppercase tracking-widest text-[#CA9667] font-semibold block mb-2">
+      <span className="text-xs uppercase tracking-widest text-[#0A8B46] font-semibold block mb-2">
         Halaman Tidak Ditemukan (404)
       </span>
 
@@ -22,7 +22,7 @@ export default function NotFound() {
 
       <Link
         href="/"
-        className="inline-flex items-center justify-center gap-2 bg-[#D3AD3B] hover:bg-[#CA9667] text-white text-xs font-semibold uppercase tracking-widest py-4 px-8 rounded-full transition-all shadow-lg shadow-[#D3AD3B]/20"
+        className="inline-flex items-center justify-center gap-2 bg-[#E5A81E] hover:bg-[#0A8B46] text-white text-xs font-semibold uppercase tracking-widest py-4 px-8 rounded-full transition-all shadow-lg shadow-[#E5A81E]/20"
       >
         <ArrowLeft className="w-4 h-4" />
         <span>Kembali ke Beranda Utama</span>
